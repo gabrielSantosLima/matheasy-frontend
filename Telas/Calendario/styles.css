@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+:root{
+  --cor-de-fundo: #c8cfdd;
+  --cor-input: #ffffff;
+  --cor-legend-form: #1d496e;
+  --cor-button-form: #1d496e;
+}
+
+html, body{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html:root{
+  font-size: 62.5%
+}
+
+*{
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  z-index: 1;
+  color: black;
+}
+
+.container .content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1%;
+}
+
+.container .content #calendar{
+  width: 90%;
+  margin: 1%;
+}
+
+.container .content #calendar-list{
+  width: 40%;
+  margin-top: 1%;
+  align-self: flex-start;
+}
+
+.container .content .cadastrar-evento{
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  width: 100%;
+  height: 100%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  z-index: 1;
+  
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.container .content .cadastrar-evento #form{
+  width: 60%;
+  height: 60%;
+  
+  border-radius: 8px;
+  text-align: center;
+  
+  display: flex;
+  flex-direction: column;
+  
+  background-color: var(--cor-de-fundo);
+}
+
+.container .content .cadastrar-evento #form fieldset{
+  width: 100%;
+  
+  padding: 0;
+  margin: 0;
+  
+  flex: 10;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border: 0;
+}
+
+.container .content .cadastrar-evento #form fieldset legend{
+  width: 100%;
+  height: 15%;
+  
+  font-size: 3.0rem;
+  font-weight: bold;
+  
+  color: white;
+  
+  border-radius: 8px 8px 0px 0px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  background-color: var(--cor-legend-form);
+}
+
+.container .content .cadastrar-evento #form fieldset .input-group{
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .content .cadastrar-evento #form fieldset .input-group input{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 2.7rem;
+  
+  width: 70%;
+
+  outline: none;
+
+  background: var(--cor-input);
+  border: 0;
+  border-radius: 8px;
+  
+  padding-left: 3%;
+}
+
+.container .content .cadastrar-evento #form fieldset .input-group input::placeholder{
+  color: #9B9A9A;
+}
+
+.container .content .cadastrar-evento #form fieldset .input-group input[type="date"]{
+  width: 30%;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.container .content .cadastrar-evento #form fieldset .input-group span{ 
+  font-size: 1.4rem;
+  font-weight: bold;
+
+  color: #0c2e49;
+  margin-right: 5px;
+}
+
+.container .content .cadastrar-evento #form .button-group{
+  flex: 1;
+
+  border-radius: 0px 0px 8px 8px;
+  background-color: var(--cor-button-form);
+
+  display: flex;
+}
+
+.container .content .cadastrar-evento #form .button-group button{
+  flex: 1;
+ 
+  cursor: pointer;
+  
+  outline: none;
+
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: white;
+  
+  border-radius: 8px;
+
+  background-color: var(--cor-button-form);
+  
+  border: 0;
+  
+  transition: 0.4s;
+}
+
+.container .content .cadastrar-evento #form button:hover{
+  filter: brightness(90%);
+}
+
+.hidden{
+  display: none;
+}
