@@ -11,43 +11,99 @@
   <link href='./../../services/FullCalendar/Daygrid/main.min.css' rel='stylesheet' />
   
   <!-- Css -->
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./styles.css">
   
 </head>
 <body>
   <div class="container">
     <div class="content">
+      
+      <!-- List Calendário -->
       <div id="calendar-list"></div>
+      
+      <!-- Calendário -->
       <div id="calendar"></div>
-      <div class="hidden cadastrar-evento">
+      
+      <!-- Container - formulário -->
+      <div class="hidden" id="container-form">
+        
         <form id="form">
           <fieldset>
-            <legend>Cadastro de Evento</legend>
+            <legend>Eventos</legend>
             
             <div class="input-group">
               <span>Título</span>
-              <input id="title" type="text" placeholder="Título">
+              <input id="title" type="text" placeholder="Digite o nome do evento...">
             </div>
             
             <div class="input-group">
               <span>Data de início</span>
               <input id="start" type="date">
+            </div>
+            
+            <div class="input-group">
               <span>Data de término</span>
               <input id="end" type="date">
             </div>
             
-            <!-- <div class="input-group">
-            </div> -->
           </fieldset>
           <div class="button-group">
-            <button id="save-button" type="submit">
-              Salvar
-            </button>
-            <button onclick="closeContainerForm()" id="close-button" type="button">
+            <button id="close-button" type="button">
               Cancelar
             </button>
+            <button id="save-button" type="submit">
+              Cadastrar
+            </button>
           </div>
-        </form>
+        </form> 
+        
+      </div>
+      
+      <!-- Container de edição -->
+      <div class="hidden" id="card-update">
+        
+        <div class="nav-card">
+          <button id="close-card-button">
+            <img src="./../../assets/icons/close.svg" alt="Close">
+          </button>
+          
+          <button id="delete-button">
+            <img src="./../../assets/icons/delete.svg" alt="Delete">
+          </button>  
+          
+          <button id="update-button">
+            <img src="./../../assets/icons/update.svg" alt="Update">
+          </button>
+          
+        </div>
+       
+        <div class="description">
+          <h3 id="title-event">Evento</h3>
+          <span id="start-event">Dia de início: </span>
+          <span id="end-event">Dia de finalização: </span>
+        </div>
+        
+        <div class="update-form">
+          <form id="form-update">
+            <fieldset>
+              <div class="input-group">
+                <span>Título</span>
+                <input id="upd-title" type="text" placeholder="Digite o nome do evento...">
+              </div>
+              
+              <div class="input-group">
+                <span>Data de início</span>
+                <input id="upd-start" type="date">
+              </div>
+              
+              <div class="input-group">
+                <span>Data de término</span>
+                <input id="upd-end" type="date">
+              </div>
+              
+            </fieldset>
+          </form>
+        </div>
       </div>
     </div>
   </div>
