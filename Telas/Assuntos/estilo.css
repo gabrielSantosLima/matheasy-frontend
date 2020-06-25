@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/*
+
+  LISTA
+
+*/
+
+.navList{
+    position: fixed;
+    float: left;
+      margin: 0;
+      list-style-type: none;
+      background-color:#c8cfdd;
+      width: 300px;
+      height: 100vh;
+      overflow: auto;
+  }
+  
+  .navList .lista-content{
+    text-align: center;
+  }
+  
+  .lista-content h4{
+     margin-bottom: 15px;
+     margin-top: 15px;
+     font-size: 20px;
+     text-align: center;
+     
+  }
+  
+  .conteudo a:link{
+     text-decoration: none;
+  }
+  
+.conteudo{
+    padding: 5px;
+}
+
+  .conteudo a {
+      color: black;
+  }
+  
+  .conteudo:hover{
+  background-color: rgba(0, 0, 0, 0.3);
+  }
+
+/*
+
+   CONTEUDO
+
+*/
+
+.assunto{
+    background-color: #c8cfdd;
+    height: 100vh;
+}
+
+.explicacao{
+    background-color: #c8cfdd;
+    height: 100%;
+}
+
+.container{
+  height: 100%;
+}

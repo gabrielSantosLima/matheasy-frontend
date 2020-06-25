@@ -1,0 +1,149 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+
+
+/*      
+
+    CARDS | Area dos Assuntos
+ 
+*/
+
+
+.grid-container{
+ 
+    display: grid;
+grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+grid-template-rows: auto;
+ margin-left: 350px;
+
+  column-gap: 20px;
+  grid-gap: 20px;
+  padding: 10px;
+  max-width: 900px;
+
+}
+
+
+section{
+    background-color: #c8cfdd;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+
+
+
+
+
+/* Configurações do card em si, individualmente*/
+
+.grid-container > div{
+    border:0;
+    font-size: 20px;
+    border-radius: 15px;
+    min-width: 200px;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+    ;
+}
+
+.card{
+    padding: 10px;
+    height: 350px;
+}
+
+.card li{
+    list-style: none;
+    margin-left: 20px;
+    font-size: 15px;
+    font-weight: 20px;
+    padding: 2px;
+}
+
+.card ul{
+    overflow: auto;
+    overflow-y: auto;
+    height: 50%;
+}
+
+.card li a{
+    text-decoration: underline; /*talvez mude*/
+    color: black;
+}
+
+.card h4{
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* BOTAO */
+
+.botao{
+    text-align: center;
+    margin-top: 10px;
+    
+}
+.card button{
+width: 150px;
+ padding: 5px;
+ border-radius: 10px;
+ box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.7);
+ cursor: pointer;
+ border: none;
+ background-color: #008ed4;
+ transition: all 0.7s;
+}
+
+.card button:hover{
+    background-color: rgb(0, 27, 114);
+}
+
+.card button span{
+    color: white;
+}
+
+/*      
+  
+   LISTA DE ASSUNTOS
+ 
+*/
+
+
+.navList{
+  position: fixed;
+  float: left;
+    margin: 0;
+    list-style-type: none;
+    background-color:#e2e8f3;
+    width: 300px;
+    height: 100vh;
+    overflow: auto;
+}
+
+.navList .lista-content{
+  text-align: center;
+}
+
+.lista-content h4{
+   margin-bottom: 15px;
+   margin-top: 15px;
+   text-align: center;
+   
+}
+
+.conteudo a:link{
+   text-decoration: none;
+}
+
+.conteudo a {
+    color: black;
+}
+
+.conteudo:hover{
+background-color: rgba(0, 0, 0, 0.3);
+}
