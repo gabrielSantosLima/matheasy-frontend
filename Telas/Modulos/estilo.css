@@ -5,6 +5,13 @@
     text-decoration: none;
 }
 
+body{
+    background: #c8cfdd !important;
+    width: 100% !important;
+    height: 100% !important;
+    align-items: center !important;
+}
+
 /*      
 
     CARDS | Area dos Assuntos
@@ -25,16 +32,6 @@ grid-template-rows: auto;
   max-width: 900px;
 
 }
-
-
-section{
-    background-color: #c8cfdd;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-}
-
-
 
 
 
@@ -112,6 +109,7 @@ width: 150px;
 */
 
 
+
 .navList{
   position: fixed;
   float: left;
@@ -119,7 +117,7 @@ width: 150px;
     list-style-type: none;
     background-color:#e2e8f3;
     width: 300px;
-    height: 100vh;
+    height: 100% !important;
     overflow: auto;
 }
 
