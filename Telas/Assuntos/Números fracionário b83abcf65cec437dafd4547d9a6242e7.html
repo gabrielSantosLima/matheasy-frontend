@@ -1,0 +1,638 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Números fracionário</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="714499d6-8c97-4d29-a835-cbc5362b1f36" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/solid_yellow.png" style="object-position:center 40%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="Nu%CC%81meros%20fraciona%CC%81rio%20b83abcf65cec437dafd4547d9a6242e7/definicao-do-conjunto-dos-numeros-racionais.png"/></div><h1 class="page-title">Números fracionário</h1></header><div class="page-body"><p id="0aafd98e-5c8a-4977-bebe-23170ca230d8" class="block-color-gray">Números racionais.</p><h1 id="5ad8d629-ce7d-4240-9703-cdf97ee9e666" class="">Números racionais</h1><hr id="5785e4ef-2649-4e5c-ae86-c051557c6df8"/><p id="f3796a31-2ec3-4ada-94c2-3a35bb1dd1c1" class="">Os números racionais são os números que podem ser escritos na forma de fração. Esses números podem também ter representação decimal finita ou decimal infinita e periódica.</p><h1 id="288ccd7e-2c5e-496d-9d9c-19031480bbbf" class="">Notação</h1><hr id="84d6acac-f504-40ab-b6bc-552079279a6b"/><div id="6150376a-a06d-457c-b91b-c98d954fb997" class="column-list"><div id="63932b20-7bac-4b45-8876-5c62b9cf56a9" style="width:50%" class="column"><figure id="b83abcf6-5cec-437d-afd4-547d9a6242e7" class="image"><a href="Nu%CC%81meros%20fraciona%CC%81rio%20b83abcf65cec437dafd4547d9a6242e7/Untitled.png"><img style="width:235px" src="Nu%CC%81meros%20fraciona%CC%81rio%20b83abcf65cec437dafd4547d9a6242e7/Untitled.png"/></a></figure></div><div id="107ec6cb-a1cf-41e9-8aac-607d7b8683ab" style="width:50%" class="column"><figure id="eaf23c7f-e94e-4c22-b551-df3ff88e9f27" class="image"><a href="Nu%CC%81meros%20fraciona%CC%81rio%20b83abcf65cec437dafd4547d9a6242e7/Untitled%201.png"><img style="width:336px" src="Nu%CC%81meros%20fraciona%CC%81rio%20b83abcf65cec437dafd4547d9a6242e7/Untitled%201.png"/></a></figure><p id="63ef7c72-6c42-4b62-bc4b-811e4a85f52e" class="">
+</p></div></div><h1 id="9e35fbc1-5ce5-4b75-baaf-f7f40e95bea1" class="">Leitura e classificação</h1><hr id="edf09f58-8bf3-4d5e-8186-4349adce62de"/><figure id="0bd685c4-46ea-41d9-86a6-0d7e887e6aa0" class="image"><a href="Nu%CC%81meros%20fraciona%CC%81rio%20b83abcf65cec437dafd4547d9a6242e7/Untitled%202.png"><img style="width:384px" src="Nu%CC%81meros%20fraciona%CC%81rio%20b83abcf65cec437dafd4547d9a6242e7/Untitled%202.png"/></a></figure><div id="982aa9fe-da5f-44fa-8adc-9074c8cf5733" class="column-list"><div id="392fe5d8-09d5-4e67-aecf-59b9c24f726b" style="width:93.75%" class="column"><ul id="352daa71-46a3-4e66-bd00-ceba616dca6a" class="bulleted-list"><li>Para fazermos as leituras de uma fração devemos observar o seu denominador, pois a partir dele as suas nomenclaturas são diferenciadas.</li></ul><ul id="bc5002a3-afc1-4215-ae23-e7ecb5ca15ce" class="bulleted-list"><li>Quando o denominador for qualquer outro número que não está representado acima devemos acrescentar a palavra avos na sua leitura.</li></ul><h3 id="967f012c-edab-416c-8246-b190181e7b72" class="">Fração própria</h3><p id="55ec0d32-b1aa-4ba2-b031-bb173d2752f2" class="">numerador<strong> &lt; </strong>denominador</p><h3 id="09659b17-b46d-4bfc-bfa3-6e2ebfa465f5" class="">Fração imprópria</h3><p id="a6024ed2-62dd-4c29-b81b-8049625fb2f9" class="">numerador &gt; denominador</p><h1 id="14849f13-a634-4e58-a11b-14a4ac353f92" class="">Operação com frações</h1><hr id="6959fa66-8176-4ec7-8b98-2a6d736cf9d1"/><h2 id="74ad465e-2e2b-41e4-9bbb-c3318a87065f" class="">Soma e subtração de fração </h2><ul id="f26401be-7a80-429a-938d-3e3e8c57e46f" class="bulleted-list"><li><strong>1 situação:</strong> Se as frações possuem o mesmo denominador, soma-se os numeradores (termos de cima) e conserva-se os denominadores (termos de baixo). </li></ul><ul id="45762f95-3b03-4b40-85a3-ffbd6b2fed1d" class="bulleted-list"><li><strong>1 situação:</strong> Se as frações possuem o mesmo denominador, soma-se os numeradores (termos de cima) e conserva-se os denominadores (termos de baixo). </li></ul><p id="10942c7f-caae-474b-8037-e8d6ee0e067d" class="">
+</p><figure id="0c288899-f0d0-4c0b-8380-1230c0c0ecec" class="image"><a href="Nu%CC%81meros%20fraciona%CC%81rio%20b83abcf65cec437dafd4547d9a6242e7/Untitled%203.png"><img style="width:240px" src="Nu%CC%81meros%20fraciona%CC%81rio%20b83abcf65cec437dafd4547d9a6242e7/Untitled%203.png"/></a></figure><ul id="2a53d641-2f42-4fe4-a830-a9490b5169c0" class="bulleted-list"><li><strong>2 situação: </strong>Somar frações com denominadores diferentes necessita saber calcular o MMC (mínimo múltiplo comum) entre dois números. Depois dividimos pelos denominadores e multiplicamos de numeradores.</li></ul><p id="f0704f08-e0c8-47d5-b51a-9b1865680c34" class="">
+</p><figure id="fbc19dfa-865c-4fa2-96db-e4781d2c9d14" class="image"><a href="Nu%CC%81meros%20fraciona%CC%81rio%20b83abcf65cec437dafd4547d9a6242e7/Untitled%204.png"><img style="width:480px" src="Nu%CC%81meros%20fraciona%CC%81rio%20b83abcf65cec437dafd4547d9a6242e7/Untitled%204.png"/></a></figure><h2 id="937e44c7-8bdd-4dae-949e-3783fa13566e" class="">Multiplicação e divisão</h2><ul id="59f664d9-1faf-4519-bda9-2d499cecf56d" class="bulleted-list"><li><strong>1 situação:</strong> Basta multiplicar o numerador de uma fração pelo numerador (o número de cima) da outra fração, e multiplicar o denominador (o número de baixo) de uma pelo denominador da outra. </li></ul><p id="77e6ae51-cc89-43a9-bdc4-a1ed773a4d10" class="">
+</p><figure id="c8379cd8-3739-4979-b709-91d5780d14ca" class="image"><a href="Nu%CC%81meros%20fraciona%CC%81rio%20b83abcf65cec437dafd4547d9a6242e7/Untitled%205.png"><img style="width:161px" src="Nu%CC%81meros%20fraciona%CC%81rio%20b83abcf65cec437dafd4547d9a6242e7/Untitled%205.png"/></a></figure><ul id="02259107-3f20-427a-a747-a6cd6aee6357" class="bulleted-list"><li><strong>2 situação:  </strong>Mantem a primeira fração e multiplica pelo inverso da segunda</li></ul><p id="6ff41323-1258-4553-9e13-15efb4d47f7b" class="">
+</p><figure id="fa933e07-c656-486a-8421-9b2a670d08e4" class="image"><a href="Nu%CC%81meros%20fraciona%CC%81rio%20b83abcf65cec437dafd4547d9a6242e7/Untitled%206.png"><img style="width:244px" src="Nu%CC%81meros%20fraciona%CC%81rio%20b83abcf65cec437dafd4547d9a6242e7/Untitled%206.png"/></a></figure><h1 id="5359fd2d-990c-4693-b837-9feafd02d6b3" class="">Números Decimais</h1><hr id="d53dfd04-ea73-4876-8eb4-e62d26800a09"/></div><div id="b2311f9c-5802-4bbb-b19c-617dcf00d3fe" style="width:6.25%" class="column"><p id="6d697ebc-4fb4-45e1-85fd-d6ec9eddcc66" class="">
+</p></div></div><p id="0905e364-124d-4a81-99c4-a457e14cda1c" class="">Os números decimais são números racionais (Q) não inteiros expressos por vírgulas e que possuem casas decimais, por exemplo: 1,54; 4,6; 8,9, etc. Eles podem ser positivos ou negativos.</p><p id="c5be5015-5566-421e-95b6-1eec328be040" class="">
+</p><hr id="86ade355-15ab-48ce-9167-fdb3af41c209"/><h1 id="d1c9c739-49b7-4e95-bc31-4a2a023a7cb6" class="">Leitura de Números Decimais</h1><hr id="b4b45bb2-76dc-497e-aec6-758a3df0d3ff"/><figure id="a72f5d73-6f05-4d35-b202-1e893190044b" class="image"><a href="Nu%CC%81meros%20fraciona%CC%81rio%20b83abcf65cec437dafd4547d9a6242e7/Untitled%207.png"><img style="width:336px" src="Nu%CC%81meros%20fraciona%CC%81rio%20b83abcf65cec437dafd4547d9a6242e7/Untitled%207.png"/></a></figure><h1 id="35463461-3ab4-43de-b415-51aeb680670b" class="">Operações com Números Decimais</h1><hr id="c68bc94c-e353-4b57-9414-56acee8d61c5"/><h2 id="48a39575-cce0-4ac3-9ec5-a47b48402f6a" class="">Soma e subtração de números decimais</h2><ul id="3e55298f-09eb-47c3-9640-d263e2fc176b" class="bulleted-list"><li><strong>1 situação</strong>:Para realizar as operações dos números decimais, devemos alinhar os números segundo a vírgula e as casas decimais que possuem.</li></ul><p id="545463bf-4e6c-460a-893f-3a80ef6d10e0" class="">
+</p><figure id="884b9c89-a226-41bd-b333-a38a5b06e81c" class="image"><a href="Nu%CC%81meros%20fraciona%CC%81rio%20b83abcf65cec437dafd4547d9a6242e7/Untitled%208.png"><img style="width:295px" src="Nu%CC%81meros%20fraciona%CC%81rio%20b83abcf65cec437dafd4547d9a6242e7/Untitled%208.png"/></a></figure><p id="95740991-ae6e-4039-b87a-2d59029e65cb" class="">
+</p><figure id="355d68e4-d225-44be-ba70-ff86211a718a" class="image"><a href="Nu%CC%81meros%20fraciona%CC%81rio%20b83abcf65cec437dafd4547d9a6242e7/Untitled%209.png"><img style="width:252px" src="Nu%CC%81meros%20fraciona%CC%81rio%20b83abcf65cec437dafd4547d9a6242e7/Untitled%209.png"/></a></figure><h2 id="e5058a15-ec3b-4a2f-9ca0-d8e3010814d6" class="">Multiplicação </h2><ul id="f410f218-e7d8-4421-b8e1-6757aabf4c9e" class="bulleted-list"><li><strong>2 situação: </strong>Multiplicamos como números naturais sem vírgula. Terminada a multiplicação, conte o número de casas depois das vírgulas. No resultado da multiplicação, posicione a vírgula decimal contando, da direita para a esquerda, o número de casas contado no item anterior.</li></ul><p id="9afd5d6e-3a78-434f-930d-490f685140a8" class="">
+</p><figure id="52ed4d39-b394-41aa-894f-362492f5669b" class="image"><a href="Nu%CC%81meros%20fraciona%CC%81rio%20b83abcf65cec437dafd4547d9a6242e7/Untitled%2010.png"><img style="width:361px" src="Nu%CC%81meros%20fraciona%CC%81rio%20b83abcf65cec437dafd4547d9a6242e7/Untitled%2010.png"/></a></figure><h2 id="716ec4ac-d6d5-4002-87d0-d1b6b6d1d829" class="">Divisão</h2><ul id="dd132791-561b-4baa-a254-215f81534b77" class="bulleted-list"><li>Quando o dividendo ou o divisor é um número decimal, é preciso igualar o número de casas decimais entre eles e depois dividimos como números naturais (sem vírgula).</li></ul><p id="786403b1-2f10-4dc5-a186-14b94d476af0" class="">
+</p><figure id="f25c6dd4-2fc9-4961-8d2c-cf45fe76b8b0" class="image"><a href="Nu%CC%81meros%20fraciona%CC%81rio%20b83abcf65cec437dafd4547d9a6242e7/Untitled%2011.png"><img style="width:240px" src="Nu%CC%81meros%20fraciona%CC%81rio%20b83abcf65cec437dafd4547d9a6242e7/Untitled%2011.png"/></a></figure></div></article></body></html>
