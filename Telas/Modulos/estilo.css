@@ -5,13 +5,6 @@
     text-decoration: none;
 }
 
-body{
-    background: #c8cfdd !important;
-    width: 100% !important;
-    height: 100% !important;
-    align-items: center !important;
-}
-
 /*      
 
     CARDS | Area dos Assuntos
@@ -67,8 +60,13 @@ grid-template-rows: auto;
 }
 
 .card li a{
-    text-decoration: underline; /*talvez mude*/
+    text-decoration: none;
     color: black;
+    margin-bottom: 5px;
+}
+
+.card li a:hover{
+    color: rgb(42, 163, 200);
 }
 
 .card h4{
@@ -110,7 +108,7 @@ width: 150px;
 
 
 
-.navList{
+/* .navList{
   position: fixed;
   float: left;
     margin: 0;
@@ -142,4 +140,4 @@ width: 150px;
 
 .conteudo:hover{
 background-color: rgba(0, 0, 0, 0.3);
-}
+} */

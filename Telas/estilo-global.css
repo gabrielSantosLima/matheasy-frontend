@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+
+/* Estilo da Lista Lateral*/
+
+
+body{
+  background: #c8cfdd;
+  width: 100% !important;
+  height: 100% !important;
+  align-items: center;
+}
+
+html,
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+}
+
+.navList{
+    position: fixed;
+    float: left;
+    margin: 0;
+    width: 300px;
+    height: 100% !important;
+
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.3);
+      list-style-type: none;
+      background-color:#e2e8f3;
+      overflow: auto;
+
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .navList .lista-content{
+    text-align: center;
+  }
+  
+  .lista-content .titulo-list{
+     margin-bottom: 15px;
+     margin-top: 15px;
+
+     font-weight: 10px;
+     text-align: center;
+     font-size: 23px;
+     
+  }
+  
+  .conteudo a:link{
+     text-decoration: none;
+  }
+
+  .conteudo{
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 16px;
+  }
+  .conteudo a {
+      color: black;
+  }
+  
+  .conteudo:hover{
+  background-color: rgba(13, 92, 102, 0.3);
+  }
+
+  .conteudo a:hover{
+    color: rgb(29, 114, 153);
+  }
