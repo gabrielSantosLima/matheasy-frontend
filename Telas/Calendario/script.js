@@ -186,5 +186,4 @@ $(document).on('DOMContentLoaded', () => {
         start: Date.now()
       }
     ]);
-  });
-  
+});

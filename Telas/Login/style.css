@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body,html{
+    height: 100%;
+}
+
+:root{
+    --box-color: #3167ad;
+}
+
+*{
+    font-family: "Roboto";
+}
+
+body{
+    background-image: url('./../../assets/icons/undraw_mathematics_4otb.svg');
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: 0 0;
+}
+
+.btn, a, .card, span{
+    color: white
+}
+
+.btn{
+    background-color: var(--box-color);
+    transition: 0.4s;
+}
+
+.btn:hover{
+    filter: brightness(70%);
+}
+
+.card{
+    background-color: var(--box-color);
+}
+
+#imagemDePerfil{
+    width: 500px;
+    position: absolute;
+    top: -3%;
+    left:50%;
+    transform: translate(-50%,-50%)
+}
+
