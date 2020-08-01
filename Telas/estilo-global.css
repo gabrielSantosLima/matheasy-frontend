@@ -3,21 +3,6 @@
 
 /* Estilo da Lista Lateral*/
 
-
-body{
-  background: #c8cfdd;
-  width: 100% !important;
-  height: 100% !important;
-  align-items: center;
-}
-
-html,
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box !important;
-}
-
 .navList{
     position: fixed;
     float: left;

@@ -7,7 +7,6 @@ body {
 
 
 
-
 @media only screen {
 	.explanation {
 		float: right;
@@ -36,50 +35,21 @@ body {
 }
 
 .explanation{
-    display: flex;
+	display: flex;
+	width: 60%;
     flex-direction: column;
     padding: 40px;
 }
 
-.page{
-    padding: 20px;
-}
-
 /*Bloco de Saiba Mais*/
-.info{
-    padding: 20px;
-    background-color: #02757e;
-    margin-top: 100px;
-    margin-bottom: 70px;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-}
-
-a#site{
-    text-decoration: underline;
-    color: white;
-    transition: 0.3s;
-}
-
-#site:hover{
-    cursor: pointer;
-    color:  black;
-}
 
 /*Titulo e Subtitulo Principal*/
-.titulo-principal{
+h1{
 	font-size: 40px;
 	text-align: center;
+	margin-top: 0;
+	margin-bottom: 30px !important;
 }
-
-.subtitle{
-	color: grey !important; /* TIRAR O IMPORTANT*/
-	margin: 25px;
-	text-align: center;
-}
-
-
-/*Titulos de Cada Assunto*/
 
 h1,
 h2,
@@ -87,32 +57,24 @@ h3 {
 	letter-spacing: -0.01em;
 	line-height: 1.2;
 	font-weight: 600;
-    margin-bottom: 0;
 }
 
-.page-body .headline{
+.explanation > h2{
 	font-size: 30px;
 }
 
-.page-body .mini-title{
+.explanation h3{
 	font-size: 24px;
 }
 
-.page-body .small-title{
+.explanation > h4{
 	margin-top: 20px;
 	font-size: 18px;
 }
 
-.headline,
-.mini-title{
+.explanation > h2, h3{
 	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
 	padding: 7px;
-}
-
-.page-title {
-	font-size: 30px;
-	margin-top: 0;
-	margin-bottom: 0.75em;
 }
 
 /* Paragrafos */
@@ -124,90 +86,91 @@ p{
     margin-bottom: 20px;
 }
 
+.explanation > p{
+	text-align: justify;
+  text-justify: inter-word;
+}
 /* Figuras*/
 
-
-.column {
-    float: left;
-    padding: 5px;
-}
-
-.table{
-	margin-top: 20px;
-}
-
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-@media screen and (max-width: 500px) {
-    .column {
-      width: 100%;
-    }
-}
-
-/* QUIZ */
-
-.quiz{
-	margin: 30px;
-	border: 4px solid #02757e;
-	display: flex;
-	flex-direction: column;
-}
-
-p#exercicio{
-	font-weight: lighter;
-}
-
-.quiz p{
-	padding: 20px;
-}
-
-.titulo{
-	background-color: #02757e;
-	padding: 20px;
-	color: white;
+img{
+	
 	text-align: center;
+	max-width: 35%;
+	height: auto;
 }
 
-.titulo h1{
-	font-weight: bold;
-	letter-spacing: 2px;
-}
+/* Lista*/
 
-.botao a .btn-link{
-	color: white !important;
-	transition: 0.3s;
-	text-decoration: none;
-}
+.list-assuntos{
+    position: fixed;
+    float: left !important;
+	margin-top: -8px;
+	margin-left: -47px;
+    width: 350px;
+    height: 100% !important;
 
-.btn-quiz{
-	padding: 15px;
-	background-color: #02757e;
-	align-items: center;
-	border: none;
-	color: white;
-	font-size: 20px;
-	cursor: pointer;
-	transition: 0.7s;
-}
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.3);
+      list-style-type: none;
+      background-color:#e2e8f3;
+      overflow: auto;
+	text-align: center;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .list-assuntos > .lista-content{
+    text-align: center;
+  }
 
-.btn-quiz:hover{
-	background-color:rgb(7, 85, 85);
-}
+  .titulo-list{
+     margin-bottom: 15px;
+     margin-top: 15px;
 
-/* Botões */
+     font-weight: 10px;
+     font-size: 23px;
+     
+  }
+  
+  .conteudo a:link{
+	 text-decoration: none;
+  }
 
-.botao{
+ .lista-content > .conteudo{
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 16px;
+  }
+  
+.lista-content > .conteudo a {
+	  color: black;
+  }
+
+  .lista-content > .conteudo{
+	  list-style: none;
+  }
+  
+  .conteudo:hover{
+  background-color: rgba(13, 92, 102, 0.3);
+  }
+
+  .conteudo a:hover{
+    color: rgb(29, 114, 153);
+  } 
+
+/* Botão 
+
+ .botao{
 	display: flex;
 	justify-content: space-between;
+
 	margin-top: 100px;
 }
 
 .btn-link{
 	text-decoration: none;
+}
+
+.btn > a{
 	color: white;
 }
 
@@ -217,6 +180,7 @@ p#exercicio{
 	background-color: teal;
 
 	border: none;
+	color: white;
 	font-size: 16px;
 
 	cursor: pointer;
@@ -227,5 +191,6 @@ p#exercicio{
 #anterior:hover,
 #proximo:hover{
 	background-color:rgb(7, 85, 85);
-	
-}
+} 
+
+*/
