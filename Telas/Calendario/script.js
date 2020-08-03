@@ -1,6 +1,7 @@
 let calendar;
 let calendarList;
 let idToUpdate;
+const { idUser } = document.body.dataset;
 
 const setCalendar = (events = []) => {
   const calendarEl = document.querySelector('#calendar');
@@ -26,7 +27,7 @@ const setCalendar = (events = []) => {
     dateClick: openContainerForm,
     buttonText: {
       today: 'Hoje',
-      noEventsToDisplay: 'Bora'
+      noEventsToDisplay: 'Sem eventos'
     },
     eventClick: openCardToUpdate,
     contentHeight: 500,
@@ -38,7 +39,11 @@ const setCalendar = (events = []) => {
   
   calendarList = createObjectCalendar(calendarElList, optionsList);
   
-  $('.fc-list-empty')[0]["innerText"] = "Sem Eventos Cadastrados!";
+  try{
+    $('.fc-list-empty')[0]["innerText"] = "Sem Eventos Cadastrados!";
+  }catch(error){
+    console.warn("Existem eventos!")
+  }
 }
 
 const openContainerForm = (info) => {
@@ -54,7 +59,7 @@ const openContainerForm = (info) => {
 const openCardToUpdate = (info) => {
   const { id } = info.event;
   const { title, start, end } = calendar.getEventById(id);
-  
+
   const startIsoDate = formattedDate(start.toISOString().substring(0,10));
   const endIsoDate = formattedDate(end ? end.toISOString().substring(0,10) : startIsoDate);
   
@@ -63,9 +68,9 @@ const openCardToUpdate = (info) => {
   $('#title-event').text(title)
   $('#start-event').text(`Dia de início: ${startIsoDate}`)
   $('#end-event').text(`Dia de finalização: ${endIsoDate}`)
-
+  
   $('#card-update').toggleClass('card-update');
-
+  
   function formattedDate(date){
     return date.toLocaleString();
   }
@@ -84,106 +89,145 @@ const closeContainer = (idContainer,className) => {
   $(`#${idContainer}`).toggleClass(className);
 }
 
-const addEvent = (data) => {
-  calendar.addEvent(data);
-  calendarList.addEvent(data);
+const addEvent = async (data) => {
+
+  await fetch(`http://localhost:8080/aluno/${idUser}/eventos`, { method: 'POST', mode: "cors", body: JSON.stringify(data)})
+  .then(resp => resp.ok)
+  .then(status => {
+    if(status){
+      calendar.addEvent(data);
+      calendarList.addEvent(data);
+    }
+  })
+  
 }
 
 const updateEvent = (data) => {
-  const events = calendar.getEvents().map(item => {
-    if(item.id !== data.id){
-      deleteEvent(item);
+  const events = calendar.getEvents();
+  
+  events.map(event => {
+    if(event.id === data.id){
+      const event = calendar.getEventById(data.id);
+      const eventList = calendarList.getEventById(data.id);
+      
+      event.remove();
+      eventList.remove();
+
+      calendar.addEvent(data);
+      calendarList.addEvent(data);
     }
-  });
-  
-  addEvent(data);
-  
+  })
   console.log(events);
 }
 
-const deleteEvent = (id) => {
+const deleteEvent = async(id) => {
   const event = calendar.getEventById(id);
-  
-  event.remove();
+  const eventList = calendarList.getEventById(id);
+
+  await fetch(`http://localhost:8080/aluno/${idUser}/eventos/${event.id}`, { method: 'DELETE', mode: 'cors' })
+  .then(resp => resp.ok)
+  .then(status => {
+    if(status){
+      event.remove();
+      eventList.remove();
+    }
+  })
+
 }
 
-const listEvents = () => {
-  
-}
+const listEvents = async () => {
+  const data = await fetch(`http://localhost:8080/aluno/${idUser}/eventos/`)
+  .then(resp => resp.json())
 
+  return data;
+}
+ listEvents();
 //Evento formulário
-$('#form').on('submit', (event) => {
-  event.preventDefault();
+const Formulario = {
   
-  const title = $('#title').val()
-  const start = $('#start').val()
-  const end = $('#end').val()
-  const id = Math.random()
-  .toString(36)
-  .substring(2, 15) + Math.random().toString(36).substring(2, 15);
-  
-  const data = {
-    id,
-    title,
-    start,
-    end
-  }
-  
-  addEvent(data);
-  
-  console.log(`[form-submit] Evento de id ${id} foi gerado!`);
-  
-  closeContainer('container-form','modificar-evento');
-})
-
-//fechar container modificar-evento
-$('#close-button').on('click', (event) => {
-  closeContainer('container-form','modificar-evento')
-});
-
-//fechar container card-update
-$('#close-card-button').on('click', (event) => {
-  closeContainer('card-update','card-update')
-});
-
-//deletar evento
-$('#delete-button').on('click', (event) => {
-  const isDelete = confirm('Você realmente deseja excluir este evento?');
-  
-  if(isDelete){
-    deleteEvent(idToUpdate);
-  }
-  
-  closeContainer('card-update', 'card-update')
-});
-
-//atualizar evento
-$('#update-button').on('click', (event) => {
-  const title = $('#upd-title').val();
-  const start = $('#upd-start').val();
-  const end = $('#upd-end').val();
-  const id = idToUpdate;
-
-  const data = {
-    id,
-    title,
-    start,
-    end
-  }
-
-  updateEvent(data)
-  
-  closeContainer('card-update', 'card-update')
-});
-
-//Monta o calendário inicial
-$(document).on('DOMContentLoaded', () => {
-  setCalendar(
-    [
-      {
-        id: 1,
-        title: 'Evento qualquer',
-        start: Date.now()
+  addEventsListeneres() {
+    
+    $('#form').on('submit', async(event) => {
+      event.preventDefault();
+      
+      const title = $('#title').val()
+      const start = $('#start').val()
+      const end = $('#end').val()
+      const id = null;
+      
+      const data = {
+        id,
+        title,
+        start,
+        end
       }
-    ]);
-});
+      
+      await addEvent(data);
+      
+      closeContainer('container-form','modificar-evento');
+    })
+    
+    //fechar container modificar-evento
+    $('#close-button').on('click', (event) => {
+      closeContainer('container-form','modificar-evento')
+    });
+    
+    //fechar container card-update
+    $('#close-card-button').on('click', (event) => {
+      closeContainer('card-update','card-update')
+    });
+    
+    //deletar evento
+    $('#delete-button').on('click', (event) => {
+      const isDelete = confirm('Você realmente deseja excluir este evento?');
+      
+      if(isDelete){
+        deleteEvent(idToUpdate);
+      }
+      
+      closeContainer('card-update', 'card-update')
+    });
+    
+    //atualizar evento
+    $('#update-button').on('click', (event) => {
+      const title = $('#upd-title').val();
+      const start = $('#upd-start').val();
+      const end = $('#upd-end').val();
+      const id = idToUpdate;
+      
+      const data = {
+        id,
+        title,
+        start,
+        end
+      }
+      
+      updateEvent(data)
+      
+      closeContainer('card-update', 'card-update')
+    });
+    
+    //Monta o calendário inicial
+    $(document).on('DOMContentLoaded', async() => {
+      let eventos;
+
+      await listEvents()
+      .then(data => eventos = data);
+      
+      console.log(eventos)
+
+      eventos = eventos.map(evento => {
+        return {
+          id: evento.id,
+          title: evento.title,
+          start: evento.start,
+          end: evento.end
+        }
+      })
+
+      setCalendar(eventos);
+    });
+  }
+}
+
+Formulario.addEventsListeneres();
