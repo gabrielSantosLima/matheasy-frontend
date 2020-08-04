@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+:root{
+  font-size: 62.5%;
+
+  --color-primary: #c8cfdd;
+  --color-secundary: #eaecef;
+  --color-message: #FFFFFF;
+  --color-font-default: #000;
+  --color-font-primary: #FFFFFF;
+  --color-font-secundary: #000;
+  --color-button: #ffffff;
+  --color-input: #e0edf8;
+  --color-input-form: #ffffff;
+  --color-contatos: #eaecef;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--color-font-default);
+  font-family: 'Roboto' sans-serif;
+}
+
+input, button{
+  height: 4rem;
+  border: 0;
+  user-select: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img{
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+}
+
+.container{
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .content{
+  width: 90vw;
+  height: 90vh;
+
+  border-radius: 0.8rem;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.contatos{
+  flex: 1;
+  background: var(--color-primary);
+
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contatos .search-teacher{
+  width: 100%;
+  height: 10%;
+
+  margin-top: 0.8rem;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.contatos .search-teacher input{
+  width: 80%;
+  padding: 0.4rem;
+  background: var(--color-input-form);
+  border-radius: 0 0.8rem 0.8rem 0;
+}
+
+.contatos .search-teacher img{
+  width: 10%;
+  height: 4rem;
+  border-radius: 0;
+  padding: 0.4rem;
+  background: var(--color-input-form);
+  border-radius: 0.8rem 0 0 0.8rem;
+}
+
+.contatos .contato{
+  width: 68%;
+  height: 8rem;
+  cursor: pointer;
+  background-color: var(--color-contatos);
+  border-radius: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  margin-top: 1rem;
+  transition: 0.4s;
+}
+
+.contatos .contato:hover{
+  filter: invert(20%);
+}
+
+.contatos .contato span{
+  width: 40%;
+  height: 100%;
+  word-break: break-all;
+  font-size: 1.2rem;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.mensagens{
+  background: var(--color-secundary);
+  flex: 2;
+  
+  overflow-y: scroll;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.mensagens .chat{
+  flex: 7;
+  display: flex;
+  align-items: flex-start;
+
+  
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-left: 4rem;
+}
+
+.mensagens .chat .my-message,
+.mensagens .chat .other-message{
+  width: 30%;
+  display: grid;
+  background-color: var(--color-message);
+
+  position: relative;
+
+  padding: 1rem;
+  border-radius: 0.8rem;
+
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "logo name" "m m";
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.4);
+  
+  margin-bottom: 40px;
+  margin-top: 10px;
+}
+
+.mensagens .chat .my-message{
+  align-self: flex-end;
+  margin-right: 3rem;
+}
+
+
+.mensagens .chat div::after{
+  content: '';
+  background-color: var(--color-message);
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  right: -10px;
+  bottom: 10px;
+  border-radius: 0 50% 0 0;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.mensagens .chat img{
+  max-width: 3rem;
+  max-height: 3rem;
+  grid-area: logo;
+}
+
+.mensagens .chat strong{
+  font-size: 1.3rem;
+  grid-area: name;
+}
+
+.mensagens .chat p{
+  margin-top: 8px;
+  font-size: 1.3rem;
+  grid-area: m;
+  display: flex;
+  word-break: break-all;
+  align-items: center;
+  justify-self: center;
+}
+
+.mensagens form{
+  flex: 1;
+  background-color: var(--color-secundary);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.mensagens > *{
+  margin-bottom: 10px;
+}
+
+.mensagens form input{
+  width: 90%;
+  padding: 0.8rem;
+  background-color: var(--color-input-form);
+  border-radius: 0.8rem;
+}
+
+.mensagens form button{
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: var(--color-button);
+  width: 4.6rem;
+  height: 4.6rem;
+  transition: filter 0.4s;
+}
+
+.mensagens form button:hover{
+  filter: brightness(70%);
+}
+
+.mensagens form button img{
+  height: 3.2rem;
+}

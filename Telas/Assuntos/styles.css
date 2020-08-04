@@ -5,8 +5,6 @@ body {
 	background-color: white;
 }
 
-
-
 @media only screen {
 	.explanation {
 		float: right;
@@ -115,6 +113,11 @@ img{
 	overflow: auto;
 	text-align: center;
 	font-family: 'Roboto', sans-serif;
+}
+
+.list-assuntos .navList{
+	position: relative;
+	width: 100%;
 }
 
 .list-assuntos > .lista-content{
