@@ -7,6 +7,7 @@ let questions = [
             "2",
             "3",
             "4",
+            "5",
             "5"
         ],
         correct: 1
@@ -17,6 +18,7 @@ let questions = [
             "2",
             "3",
             "4",
+            "5",
             "5"
         ],
         correct: 2
@@ -27,6 +29,7 @@ let questions = [
             "2",
             "3",
             "4",
+            "5",
             "5"
         ],
         correct: 3
@@ -37,6 +40,7 @@ let questions = [
             "2",
             "3",
             "4",
+            "5",
             "5"
         ],
         correct: 4
@@ -47,6 +51,7 @@ let questions = [
             "2",
             "3",
             "4",
+            "5",
             "5"
         ],
         correct: 4
@@ -120,13 +125,13 @@ const Quiz = {
     changeQuestion: () => {
         const question = questions[currentQuestion];
         
-        $('.question-text').text(question.answer);
-        $('.question-number').text(`Questão ${currentQuestion + 1} de ${numberQuestions}`);
+        $('.question-text').html(question.answer);
+        $('.question-number').html(`Questão ${currentQuestion + 1} de ${numberQuestions}`);
         
         for(let count = 0; count < numberQuestions; count++){
             const option = question.options[count]
             
-            $($('.option')[count]).text(option)
+            $($('.option')[count]).html(option)
         }
         
         Quiz.setCorrectIndex(question.correct);
@@ -153,11 +158,11 @@ const Quiz = {
         const totalPoints = `${rights}/${numberQuestions}`;
 
         //Mostrar resultados
-        $('.numero-questoes').text(numberQuestions);
-        $('.acerto').text(rights);
-        $('.erro').text(errors);
-        $('.percentual').text(percent);
-        $('.ponto').text(totalPoints);
+        $('.numero-questoes').html(numberQuestions);
+        $('.acerto').html(rights);
+        $('.erro').html(errors);
+        $('.percentual').html(percent);
+        $('.ponto').html(totalPoints);
     }
 }
 
@@ -176,8 +181,8 @@ function addEvents(){
 }
 
 function prepareQuiz(){
-    $('.total-question').text(numberQuestions);
-    $('.question-number').text(`Questão 1 de ${numberQuestions}`);
+    $('.total-question').html(numberQuestions);
+    $('.question-number').html(`Questão 1 de ${numberQuestions}`);
 
     for(let count = 0; count < numberQuestions; count++){
         $('.answer-indicator').append('<div></div>')
