@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
-    <link rel="stylesheet" href="style.css">
-    
+    <link rel="stylesheet" href="./styles.css">
+
 </head>
-<body>
+
+<body data-id-modulo = "12">
     <div class="home-box custom-box">
         <h3> <span class="assunto">Assunto do Quiz</span> </h3>
         <p>Responda todas as questões para um bom rendimento. Número de Questões: <span class="total-question">4</span></p>
-        <button type="button" class="btn">Responder</button>
+        <button type="button" class="btn" id="start">Responder</button>
     </div>
-
 
     <div class="quiz-box custom-box hide">
         <div class="question-number">
@@ -23,51 +24,52 @@
             Enunciado da questão?
         </div>
 
-        <div class="option-container">
-            <div class="option">Resposta</div>
-            <div class="option">Resposta</div>
-            <div class="option">Resposta</div>
-            <div class="option">Resposta</div>
-            <div class="option">Resposta</div>
+        <div class="option-container" id="option-container" data-correct-index="2">
+            <div class="option" data-index="1">Resposta</div>
+            <div class="option" data-index="2">Resposta</div>
+            <div class="option" data-index="3">Resposta</div>
+            <div class="option" data-index="4">Resposta</div>
         </div>
         <div class="next-btn">
-            <button type="button" class="btn">Próxima</button>
+            <button type="button" class="btn" id="next">Próxima</button>
         </div>
         <div class="answer-indicator">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
         </div>
     </div>
-        <div class="result-box custom-box hide">
-            <h1>Resultado</h1>
-            <small>Seus resultados serão contabilizados em um ranking</small>
-            <table>
-                <tr>
-                    <td class="title">Número de Questões</td>
-                    <td>4</td>
-                </tr>
-                <tr>
-                    <td class="title">Acertos</td>
-                    <td> <span class="acerto">3</span></td>
-                </tr>
-                <tr>
-                    <td class="title">Erros</td>
-                    <td> <span class="erro">1</span> </td>
-                </tr>
-                <tr>
-                    <td class="title">Percentual</td>
-                    <td> <span class="percentual">80.00%</span> </td>
-                </tr>
-                <tr>
-                    <td class="title">Pontos</td>
-                    <td> <span class="ponto">3/4</span> </td>
-                </tr>
-            </table>
+    <div class="result-box custom-box hide">
+        <h1>Resultado</h1>
+        <small>Seus resultados serão contabilizados em um ranking</small>
+        <table>
+            <tr>
+                <td class="title">Número de Questões</td>
+                <td class="numero-questoes">4</td>
+            </tr>
+            <tr>
+                <td class="title">Acertos</td>
+                <td> <span class="acerto">3</span></td>
+            </tr>
+            <tr>
+                <td class="title">Erros</td>
+                <td> <span class="erro">1</span> </td>
+            </tr>
+            <tr>
+                <td class="title">Percentual</td>
+                <td> <span class="percentual">80.00%</span> </td>
+            </tr>
+            <tr>
+                <td class="title">Pontos</td>
+                <td> <span class="ponto">3/4</span> </td>
+            </tr>
+        </table>
 
-            <button type="button" class="btn">Tentar Novamente</button>
+        <button type="button" class="btn" id="again">Tentar Novamente</button>
+        <a href="/">
             <button type="button" class="btn">Voltar aos Estudos</button>
-        </div>
+        </a>
+    </div>
+
+    <script src="./../../jquery/jquery-3.5.1.min.js"></script>
+    <script src="./script.js"></script>
 </body>
+
 </html>
