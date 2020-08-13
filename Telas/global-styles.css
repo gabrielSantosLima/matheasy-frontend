@@ -290,6 +290,8 @@ label #sidebar_btn:hover {
     width: 800px;
     overflow: hidden;
     padding: 50px;
+    background-color: #191970
+
 }
 
 .mega-menu a {
@@ -298,7 +300,7 @@ label #sidebar_btn:hover {
 }
 
 .mega-menu .sub-menu-heading {
-    color: darkcyan;
+    color: white;
 }
 
 @media(max-width:500px) {
