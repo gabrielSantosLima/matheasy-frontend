@@ -129,7 +129,7 @@ label #sidebar_btn {
     color: #fff;
     position: fixed;
     cursor: pointer;
-    left: 24px;
+    left: 20px;
     font-size: 15px;
     margin: -10px 0px;
     transition: 0.5s;
@@ -149,7 +149,7 @@ label #sidebar_btn:hover {
 }
 
 #check:checked~.sidebar a {
-    font-size: 20px;
+    font-size: 23px;
     margin-left: 165px;
     width: 100%;
 }
@@ -260,7 +260,7 @@ label #sidebar_btn:hover {
 }
 
 .navbar-brand {
-    margin-left: 45px;
+    margin-left: 40px;
 }
 
 .navbar-brand img {
