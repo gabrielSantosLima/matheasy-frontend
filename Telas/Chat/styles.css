@@ -167,6 +167,8 @@ img{
   
   margin-bottom: 40px;
   margin-top: 10px;
+
+  animation: onMessage .4s backwards ease;
 }
 
 .mensagens .chat .my-message{
@@ -243,4 +245,14 @@ img{
 
 .mensagens form button img{
   height: 3.2rem;
+}
+
+@keyframes onMessage{
+  from{
+    opacity: 0;
+    transform: translateX(-20px);
+  }to{
+    opacity: 0.9;
+    transform: translateX(0px);
+  }
 }
