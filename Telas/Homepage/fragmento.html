@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aluno</title>
+<link rel="stylesheet" href="./../../bootstrap-4.5.0-dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+<link rel="stylesheet" href="./../global-styles.css">
+
+<body>
+    <input type="checkbox" id="check">
+    <header>
+        <div class="wrapper">
+            <div class="top_menu">
+                <nav class="navbar navbar-expand-lg navbar-light" id="gadient">
+                    <a class="navbar-brand" href="#"><img src="./../img/logouno.png"></a>
+                    <label for="check"><i class="fas fa-bars" id="sidebar_btn"></i></label>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+          </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  SÉRIES
+                </a>
+                                <div class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown" >
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <p><strong class="sub-menu-heading">6ºano</strong></p>
+                                            <p><a href="#">Números Naturais</a></p>
+                                            <p><a href="#">Operações</a></p>
+                                            <p><a href="#">Sequências</a></p>
+                                            <p><a href="#">Introdução a Números Racionais</a></p>
+                                            <p><a href="#">Matemática Financeira</a></p>
+                                            <p><a href="#">Unidades de medidas</a></p>
+                                            <p><a href="#">Geometria Plana</a></p>
+                                            <p><a href="#">Geometria Espacial</a></p>
+                                            <p><a href="#">Sistema Cartesiano</a></p>
+                                            <p><a href="#">Estatística</a></p>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <p><strong class="sub-menu-heading">7ºano</strong></p>
+                                            <p><a href="#">Números Inteiros</a></p>
+                                            <p><a href="#">Operações</a></p>
+                                            <p><a href="#">Números Racionais</a></p>
+                                            <p><a href="#">Operações</a></p>
+                                            <p><a href="#">Matemática Financeira</a></p>
+                                            <p><a href="#">Álgebra</a></p>
+                                            <p><a href="#">Geometria Plana</a></p>
+                                            <p><a href="#">Geometria Espacial</a></p>
+                                            <p><a href="#">Sistema Cartesiano</a></p>
+                                            <p><a href="#">Estatística</a></p>
+                                            <p><a href="#">Probabilidade</a></p>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <p><strong class="sub-menu-heading">8ºano</strong></p>
+                                            <p><a href="#">Números Reais</a></p>
+                                            <p><a href="#">Álgebra</a></p>
+                                            <p><a href="#">Geometria Plana</a></p>
+                                            <p><a href="#">Geometria Espacial</a></p>
+                                            <p><a href="#">Estatística</a></p>
+                                            <p><a href="#">Probabilidade</a></p>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <p><strong class="sub-menu-heading">9ºano</strong></p>
+                                            <p><a href="#">Operações</a></p>
+                                            <p><a href="#">Unidades de medidas</a></p>
+                                            <p><a href="#">Álgebra</a></p>
+                                            <p><a href="#">Noções de funções</a></p>
+                                            <p><a href="#">Geometria Plana</a></p>
+                                            <p><a href="#">Trigonometria</a></p>
+                                            <p><a href="#">Geometria Espacial</a></p>
+                                            <p><a href="#">Estatística</a></p>
+                                            <p><a href="#">Probabilidade</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" name="quiz" href="#">MENSAGENS</a></li>
+                            <li class="nav-item"><a class="nav-link" name="chat" href="#">CALENDÁRIO</a></li>
+                            <li class="nav-item"><a class="nav-link" name="calendar" href="#">ANOTAÇÕES</a></li>
+                            <li class="nav-item"><a class="nav-link" name="conteudo" href="#">QUIZ</a></li>
+                            <li class="nav-item"><a class="nav-link" name="card" href="#">RANKING</a></li>
+                            <form class="form-inline my-2 my-lg-0">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar..." aria-label="Search">
+                                <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Buscar</button>
+                            </form>
+                    </div>
+                </nav>
+            </div>
+    </header>
+
+    <script src="./../../jquery/jquery-3.5.1.min.js"></script>
+    <script src="./../api.js"></script>
+    <script src="./script.js"></script>
+
+    <body>
+
+
+        <div class="mobile_nav">
+            <div class="nav_bar">
+                <img src="./../img/1.png" class="mobile_profile_image" alt="">
+                <i class="fa fa-bars nav_btn"></i>
+            </div>
+            <div class="mobile_nav_items">
+                <a href="#"><i class="fas fa-user-circle"></i><span>Perfil</span></a>
+                <a href="#"><i class="fas fa-book"></i><span>Exercícios</span></a>
+                <a href="#"><i class="fas fa-comments"></i><span>Professores</span></a>
+                <a href="#"><i class="fas fa-comments"></i><span>Aluno</span></a>
+                <a href="#"><i class="fas fa-info-circle"></i><span>Ajuda</span></a>
+                <a href="#"><i class="fas fa-cogs"></i><span>Configurações</span></a>
+                <a href="#"><i class="fas fa-sign-out-alt"></i><span>Sair</span></a>
+            </div>
+        </div>
+
+
+        <div class="sidebar">
+            <div class="profile_info">
+                <img src="./../img/1.png" class="profile_image" alt="">
+                <h4 class="nome-usuario">Usuário</h4>
+            </div>
+            <a href="#"><i class="fas fa-user-circle"></i><span>Perfil</span></a>
+            <a href="#"><i class="fas fa-book"></i><span>Exercícios</span></a>
+            <a href="#"><i class="fas fa-comments"></i><span>Professores</span></a>
+            <a href="#"><i class="fas fa-comments"></i><span>Aluno</span></a>
+            <a href="#"><i class="fas fa-info-circle"></i><span>Ajuda</span></a>
+            <a href="#"><i class="fas fa-cogs"></i><span>Configurações</span></a>
+            <a href="#"><i class="fas fa-sign-out-alt"></i><span>Sair</span></a>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('.nav_btn').click(function() {
+                    $('.mobile_nav_items').toggleClass('active');
+                });
+            });
+        </script>
+    </body>
+
+</html>

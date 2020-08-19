@@ -1,0 +1,18 @@
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    text-align: center;
+    font-size: 35px;
+    padding: 0;
+}
+
+@media only screen and (min-width: 1300px) {
+    .marg {
+        margin-left: 200px;
+        margin-top: 25px;
+    }
+    .marl {
+        margin-left: 340px;
+        margin-top: 25px;
+    }
+}
