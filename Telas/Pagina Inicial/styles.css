@@ -4,6 +4,14 @@
 	margin: 0;
 	box-sizing: border-box;
 }
+
+
+:root{
+	--color-text: black;
+	--color-tittle-span-text: #000080;
+}
+
+
 html {
 	font-size: 10px;
 	font-family: 'Roboto', sans-serif;
@@ -25,7 +33,7 @@ img {
 	object-fit: cover;
 }
 p {
-	color: black;
+	color: var(--color-text);
 	font-size: 1.4rem;
 	margin-top: 5px;
 	line-height: 2.5rem;
@@ -35,14 +43,14 @@ p {
 .section-title {
 	font-size: 4rem;
 	font-weight: 300;
-	color: black;
+	color: var(--color-text);
 	margin-bottom: 10px;
 	text-transform: uppercase;
 	letter-spacing: .2rem;
 	text-align: center;
 }
 .section-title span {
-	color: #000080;
+	color: var(--color-tittle-span-text);
 }
 
 .cta {

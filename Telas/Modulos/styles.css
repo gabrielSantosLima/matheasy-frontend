@@ -5,6 +5,15 @@
     text-decoration: none;
 }
 
+:root{
+    --color-btn-background: #008ed4;
+    --color-text: black;
+    --color-list-text-hover: rgb(42, 163, 200);
+    --color-btn-background-hover:  rgb(0, 27, 114);
+    --color-btn-text: white;
+
+}
+
 /*      
 
     CARDS | Area dos Assuntos
@@ -61,12 +70,12 @@ grid-template-rows: auto;
 
 .card li a{
     text-decoration: none;
-    color: black;
+    color: var(--color-text);
     margin-bottom: 5px;
 }
 
 .card li a:hover{
-    color: rgb(42, 163, 200);
+    color: var(--color-list-text);
 }
 
 .card h4{
@@ -88,14 +97,14 @@ width: 150px;
  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.7);
  cursor: pointer;
  border: none;
- background-color: #008ed4;
+ background-color: var(--color-btn-background);
  transition: all 0.7s;
 }
 
 .card button:hover{
-    background-color: rgb(0, 27, 114);
+    background-color: var(--color-btn-background-hover);
 }
 
 .card button span{
-    color: white;
+    color: var(--color-btn-text);
 }
