@@ -224,7 +224,7 @@ header .wrapper .top_menu span{
 
 .mega-menu .sub-menu-heading {
     font-size: 28px;
-    color: var(--navbar-li-a);
+    color: var(--navbar-li-ac);
 }
 
 @media(max-width:500px) {
