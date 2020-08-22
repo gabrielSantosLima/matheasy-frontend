@@ -1,5 +1,5 @@
-:root{
-    --sidenav-background:  #2761be;
+:root {
+    --sidenav-background: #2761be;
     --topmenu-background: linear-gradient(to right, #31548d, #0892b4);
     --btn-sidebar: #fff;
     --sidenav-shadow: rgba(0, 0, 0, 0.6);
@@ -16,73 +16,75 @@
     --navbar-li-a: white;
     --megamenu-background: #1182f3;
     --megamenu-a-text: #191970;
-    
 }
 
-header .wrapper .top_menu span{
+header .wrapper .top_menu span {
     color: var(--btn-sidebar);
 }
+
 .sidenav {
     height: 100%;
     width: 0;
     position: fixed;
     z-index: 9;
-    top:60px;
+    top: 60px;
     left: 0;
     background-color: var(--sidenav-background);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
     overflow-y: auto;
-    box-shadow: 10px solid ;
-  }
+    box-shadow: 10px solid;
+}
 
-  .sidenav .closebtn{
-      color: var(--btn-sidebar);
-      position: absolute;
-      top: 0;
-      right: 25px;
-      font-size: 36px;
-      margin-left: 50px;
-  }
-  
-  .sidenav .closebtn:hover {
+.sidenav .closebtn {
+    color: var(--btn-sidebar);
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.sidenav .closebtn:hover {
     color: var(--sidenav-closebtn);
     cursor: pointer;
 }
-  
 
-  .sidenav a {
+.sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     color: var(--sidenav-a-text);
     display: block;
     margin: 20px 0 0 0;
     transition: 0.3s;
-  }
+}
 
-  .sidenav .profile img{
-      margin-right: 10px;
-      font-size: 20px;
-  }
-  
-  .sidenav a:hover {
+.sidenav .profile img {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.sidenav a:hover {
     color: var(--sidenav-a-hover-text);
     font-size: 22px;
     border: 2px solid var(--sidenav-a-hover-border);
     background: var(--sidenav-a-hover-background);
 }
-  
 
-  
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
 
-  /* TOP */
 
-  .nav-link {
+/* TOP */
+
+.nav-link {
     transition: 0.5s;
 }
 
@@ -188,7 +190,7 @@ header .wrapper .top_menu span{
 }
 
 .navbar-brand {
-    margin-left: 40px;
+    margin-left: 10px;
 }
 
 .navbar-brand img {
@@ -201,7 +203,6 @@ header .wrapper .top_menu span{
     text-align: left;
 }
 
-
 .navbar-toggler {
     outline: none !important;
 }
@@ -212,7 +213,6 @@ header .wrapper .top_menu span{
 
 .mega-menu {
     width: 700px;
-    
     padding: 5px;
     background-color: var(--megamenu-background);
 }
