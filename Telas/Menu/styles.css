@@ -1,16 +1,16 @@
 :root {
-    --sidenav-background: #000080;
+    --sidenav-background: #0a4270c0;
     --topmenu-background: linear-gradient(to right, #000080, #0892B4);
+
     --btn-sidebar: #fff;
     --sidenav-shadow: rgba(0, 0, 0, 0.6);
     --sidenav-closebtn: #bbc7da;
     --sidenav-a-text: #d6dae0;
     --sidenav-a-hover-text: #d6dae0;
-    --sidenav-a-hover-background: #1d50a1;
+    --sidenav-a-hover-background: #075da357;
     --sidenav-a-hover-border: rgba(255, 255, 255, 0.164);
     --nav-link-hover: rgb(6, 31, 56);
-    --mobile-nav-itens-background: linear-gradient(to bottom, #332a94, #134d74);
-    --mobile-nav-itens-a-hover: linear-gradient(to right, #514a9d98, #1f75afa4);
+
     --navitem-atual-navlink-hover: #237e91;
     --navitem-atual-navlink-hover-text: rgb(5, 0, 73);
     --navbar-li-a: white;
@@ -123,37 +123,6 @@ header .wrapper .top_menu span {
         height: 50px;
         border-radius: 50%;
     }
-}
-
-.mobile_nav_items {
-    background: var(--mobile-nav-itens-background);
-    display: none;
-}
-
-.mobile_nav_items a {
-    color: var(--btn-sidebar);
-    display: block;
-    text-align: center;
-    letter-spacing: 1px;
-    line-height: 60px;
-    text-decoration: none;
-    box-sizing: border-box;
-    transition: 0.5s;
-    transition-property: background;
-}
-
-.mobile_nav_items a:hover {
-    background: var(--navitem-atual-navlink-hover);
-    text-decoration: none;
-    color: var(--navitem-atual-navlink-hover-text);
-}
-
-.mobile_nav_items i {
-    padding-right: 10px;
-}
-
-.active {
-    display: block;
 }
 
 

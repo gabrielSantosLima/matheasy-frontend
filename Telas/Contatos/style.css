@@ -40,14 +40,13 @@ header{
 }
 
 .grid .card{
-  margin: 10px;
+ margin-left: 100px;
   justify-self: center;
   height: 200px;
   width: 200px;
   overflow: hidden;
-  margin: 10 auto;
   border-radius: 50%;
-  transition: all 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
   box-shadow: 0px 1px 5px 0px var(--card-shadow);
   background: var(--card-background);
 }
@@ -148,7 +147,7 @@ header{
 
 .grid .card .icons{
   position: relative;
-  margin-top: -470px;
+  margin-top: -450px;
   margin-left: 10px;
   list-style: none;
 }
@@ -171,8 +170,8 @@ header{
   margin-left: 7px;
 }
 
-.grid .card .icons img{
-  margin-top: 5px;
+.grid .card .icons img{ 
+    margin-top: -5px;
 }
 
 .grid .card .icons #place{
@@ -202,35 +201,4 @@ header{
 
 .grid .card .icons li button:hover{
   transform: scale(0.9);
-}
-
-/*   POP-UP
-
-    -------
-*/
-
-
-/* CLASSIFICAÇÃO */ 
-
-
-.rates{
-    counter-reset: rateme 0;   
-    font-size: 12px;
-    font-weight: 500;
-    height: 20px;
-}
-
-
-.grid .card .content .rates .rate{
-  color: var(--card-rate-star);
-  font-size: 1.4rem;
-  padding: 0 3px;
-}
-
-.grid .card .content .rates .rate::before{
-  content: '\2606';  
-  cursor: pointer;
-}
-.grid .card .content .rates .rate.rated::before{
-  content: '\2605'; 
 }

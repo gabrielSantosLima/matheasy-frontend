@@ -4,6 +4,13 @@
     --sidbar-background: #f5f5f5;
     --sidebar-background-hover: #0875cf;
     --sidebar-link: #555;
+
+    --main-background: rgb(4, 71, 83); 
+    --card-background: rgb(255, 255, 255);
+    --card-front-background: linear-gradient(to right, rgb(43, 108, 148), rgb(6, 133, 192));
+    --card-front-background-hover: rgb(106, 170, 230);
+    --card-front-background-image: url('/assets/icons/learn.svg');
+    --card-content-ul: rgba(241, 241, 241, 0.308);
     
 }
 
@@ -78,15 +85,6 @@ body{
 }
 
 /* Main */
-
-:root{
-    --main-background: rgb(4, 71, 83); 
-    --card-background: rgb(255, 255, 255);
-    --card-front-background: linear-gradient(to right, rgb(43, 108, 148), rgb(6, 133, 192));
-    --card-front-background-hover: rgb(106, 170, 230);
-    --card-front-background-image: url('/assets/icons/learn.svg');
-    --card-content-ul: rgba(241, 241, 241, 0.308);
-}
 
 *{
     margin: 0;

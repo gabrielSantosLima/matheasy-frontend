@@ -1,53 +1,60 @@
-* {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-}
+/* Sidebar */
 
-.navList {
-    position: fixed;
-    float: left;
-    margin: 0;
-    width: 300px;
-    height: 100% !important;
-    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.3);
-    list-style-type: none;
-    background-color: #e2e8f3;
+.sidebar {
+	width: 270px;
+	height: 100vh;
+	padding: 10px;
+	background: var(--sidbar-background);
+	position: fixed;
     overflow: auto;
-    font-family: 'Roboto', sans-serif;
-}
-
-.navList .lista-content {
     text-align: center;
 }
 
-.lista-content .titulo-list {
-    margin-bottom: 15px;
-    margin-top: 15px;
-    font-weight: 10px;
-    text-align: center;
-    font-size: 23px;
+.sidebar h2 {
+	margin:10px;
+	overflow: hidden;
+    line-height: 1;
+    font-size: 24px;
+	color: var(--sidebar-text);
 }
 
-.conteudo a:link {
+.sidebar ul {
+	list-style: none;
+    padding: 0px;
+ 
+}
+
+.sidebar a {
+	display: block;
+	padding: 5px 20px;
+    text-decoration: none;
+    font-size: 14px;
+	color: var(--sidebar-link);
+}
+
+
+
+.sidebar li a.active, .sidebar li a:hover {
+	background: var(--sidebar-background-hover);
+    color: var(--sidebar-text-hover);
     text-decoration: none;
 }
 
-.conteudo {
-    margin: 0;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-size: 16px;
-}
-
-.conteudo a {
-    color: black;
-}
-
-.conteudo:hover {
-    background-color: rgba(13, 92, 102, 0.3);
-}
-
-.conteudo a:hover {
-    color: rgb(29, 114, 153);
+@media (max-width: 700px) {
+	.sidebar {
+		border-top: 80px solid var(--sidebar-background);
+		width: auto;
+		height: auto;
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		padding: 10px;
+	}
+	.sidebar > div {
+		flex: 1;
+		margin: 10px;
+	}
+	.sidebar a {
+		padding: 5px;
+	}
 }

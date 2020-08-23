@@ -1,11 +1,13 @@
 * { box-sizing: border-box; }
 
-body { 
-    font-family: sans-serif; 
+body{
+  background: var(--background);
 }
 
 :root{
   --h2-color: black;
+  --background: rgb(33, 115, 150);
+
 }
 
 .carousel {

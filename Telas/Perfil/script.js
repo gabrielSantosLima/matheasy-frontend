@@ -37,7 +37,7 @@ function closePopup(popup) {
   overlay.classList.remove('active')
 }
 
-
+// Desenho
 
 const tagSVG = document.querySelector('svg');
 const pathDoSVG = document.querySelector('svg path');
@@ -45,6 +45,15 @@ const tamanhoTotalDoPath = pathDoSVG.getTotalLength();
 tagSVG.style.setProperty('--tamanhoTotalDoPath', tamanhoTotalDoPath);
 
 console.log(tamanhoTotalDoPath); // 3749.863525390625
+
+tamanhoTotalDoPath.style.WebkitTransition = 'none';
+tamanhoTotalDoPath.style.strokeDasharray = len + ' ' + len;
+tamanhoTotalDoPath.style.strokeDashoffset = len;
+tamanhoTotalDoPath.getBoundingClientRect();
+tamanhoTotalDoPath.style.transition = p.style.WebkitTransition = 'stroke-dashoffset 5s ease-in-out';
+tamanhoTotalDoPath.style.strokeDashoffset = '0';
+
+// Botões
 
 function edit() {
     document.querySelector('#user').readOnly = false;
