@@ -1,6 +1,6 @@
 :root {
-    --sidenav-background: #2761be;
-    --topmenu-background: linear-gradient(to right, #31548d, #0892b4);
+    --sidenav-background: #000080;
+    --topmenu-background: linear-gradient(to right, #000080, #0892B4);
     --btn-sidebar: #fff;
     --sidenav-shadow: rgba(0, 0, 0, 0.6);
     --sidenav-closebtn: #bbc7da;
@@ -8,13 +8,13 @@
     --sidenav-a-hover-text: #d6dae0;
     --sidenav-a-hover-background: #1d50a1;
     --sidenav-a-hover-border: rgba(255, 255, 255, 0.164);
-    --nav-link-hover: rgb(24, 101, 179);
+    --nav-link-hover: rgb(6, 31, 56);
     --mobile-nav-itens-background: linear-gradient(to bottom, #332a94, #134d74);
     --mobile-nav-itens-a-hover: linear-gradient(to right, #514a9d98, #1f75afa4);
     --navitem-atual-navlink-hover: #237e91;
     --navitem-atual-navlink-hover-text: rgb(5, 0, 73);
     --navbar-li-a: white;
-    --megamenu-background: #1182f3;
+    --megamenu-background: #191970;
     --megamenu-a-text: #191970;
 }
 
