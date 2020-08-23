@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 :root{
-  font-size: 62.5%;
+  font-size: 69.5%;
 
   --color-primary: #c8cfdd;
   --color-secundary: #eaecef;
@@ -13,9 +13,10 @@
   --color-input: #e0edf8;
   --color-input-form: #ffffff;
   --color-contatos: #eaecef;
+  --color-contato-select: #aaeea7;
 }
 
-*{
+*, button, a, input{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -130,23 +131,26 @@ img{
 
 .mensagens{
   background: var(--color-secundary);
-  flex: 2;
-  
-  overflow-y: scroll;
-  
+  flex: 3;
   display: flex;
   flex-direction: column;
 }
 
 .mensagens .chat{
-  flex: 7;
-  display: flex;
-  align-items: flex-start;
-
-  
-  flex-direction: column;
-  justify-content: flex-end;
+  overflow-y: scroll;
+  height: 100%;
   margin-left: 4rem;
+}
+
+::-webkit-scrollbar{
+  width: 10px;
+  background: transparent; 
+}
+
+::-webkit-scrollbar-thumb{
+  border-radius: 8px;
+  background: var(--color-primary); 
+  transition: .4s;
 }
 
 .mensagens .chat .my-message,
@@ -156,6 +160,8 @@ img{
   background-color: var(--color-message);
 
   position: relative;
+
+  z-index: 2;
 
   padding: 1rem;
   border-radius: 0.8rem;
@@ -173,9 +179,9 @@ img{
 
 .mensagens .chat .my-message{
   align-self: flex-end;
-  margin-right: 3rem;
+  margin-right: 0;
+  margin-left: 60%;
 }
-
 
 .mensagens .chat div::after{
   content: '';
@@ -205,14 +211,17 @@ img{
   font-size: 1.3rem;
   grid-area: m;
   display: flex;
-  word-break: break-all;
+  word-break: normal;
   align-items: center;
   justify-self: center;
 }
 
 .mensagens form{
-  flex: 1;
-  background-color: var(--color-secundary);
+  position: relative;
+  bottom: 0;
+  z-index: 1000;
+
+  background-color: transparent;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -245,6 +254,15 @@ img{
 
 .mensagens form button img{
   height: 3.2rem;
+}
+
+.select{
+  transition: .4s;
+  background: var(--color-contato-select) !important;
+}
+
+.hide{
+  display: none !important;
 }
 
 @keyframes onMessage{

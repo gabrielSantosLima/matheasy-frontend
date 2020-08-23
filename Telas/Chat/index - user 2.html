@@ -6,7 +6,7 @@
   <title>Chat - Sarah</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
-<body data-id="3" data-name="Sarah">
+<body data-id="2" data-name="Sarah">
   <div class="container">
     <div class="content">
       
@@ -15,19 +15,20 @@
         <div class="search-teacher">
           <img src="./../../assets/icons/search.svg" alt="Pesquisar Contato">
           <input type="text" id="search" placeholder="Buscar contato...">
+          <a href="/adicionar-contatos">a</a>
         </div>
         
-        <div class="contato">
+        <div class="contato" data-contato-id="1">
           <img src="./../../assets/imagem-teste.jpg" alt="User" class="logo">
-          <span>Outro Gabriel Lima</span>
+          <span>Gabriel</span>
         </div>
       </div>
 
       <div class="mensagens">
-        <div class="chat">
+        <div class="chat hide">
         </div>
         
-        <form id="form">
+        <form id="form" class="hide">
           <input type="text" id="input" autocomplete="off" placeholder="Digite sua mensagem...">
           <button type="submit">
             <img src="./../../assets/icons/send.svg" alt="Enviar">
