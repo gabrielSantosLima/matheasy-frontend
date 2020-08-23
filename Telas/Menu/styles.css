@@ -1,6 +1,6 @@
 :root {
     --sidenav-background: #0a4270c0;
-    --topmenu-background: linear-gradient(to right, #000080, #0892B4);
+    --topmenu-background: linear-gradient(to right, #2169ac, #30aac9);
 
     --btn-sidebar: #fff;
     --sidenav-shadow: rgba(0, 0, 0, 0.6);
@@ -15,7 +15,7 @@
     --navitem-atual-navlink-hover-text: rgb(5, 0, 73);
     --navbar-li-a: white;
     --megamenu-background: #191970;
-    --megamenu-a-text: #191970;
+    --megamenu-a-text: #000000;
 }
 
 header .wrapper .top_menu span {

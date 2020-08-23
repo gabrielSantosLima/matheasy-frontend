@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root{
-    --box-color: #3167ad;
+    --box-color: linear-gradient(rgb(85, 172, 212), #0a4a9ee5);
+    --btn-color: rgb(43, 133, 175);
 }
 
 *{
@@ -23,17 +24,17 @@ label{
 }
 
 .card{
-    background-color: var(--box-color);
+    background-image: var(--box-color);
     margin: 20px 0 0 0;
 }
 
 .btn{
-    background-color: var(--box-color);
+    background-color: var(--btn-color);
     transition: 0.4s;
 }
 
 .btn:hover{
-    filter: brightness(70%);
+    filter: brightness(90%);
 }
 
 #senha{

@@ -7,11 +7,103 @@
     <title>Assuntos</title>
     <link rel="shortcut icon" href="/assets/picture.ico">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="/estilo-global.css">
+    <link rel="stylesheet" href="/Telas/Menu/styles.css">
     <link rel="stylesheet" href="/bootstrap-4.5.0-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/bootstrap-4.5.0-dist/js/bootstrap.min.js">
 </head>
 <body>
+
+    <header>
+        <div class="wrapper">
+            <div class="top_menu">
+                <nav class="navbar navbar-expand-lg navbar-light" id="gadient">
+                    <span style="font-size:30px;cursor:pointer" onclick="openNav()" id="toggle">&#9776;</span>
+                    <a class="navbar-brand" href="#"><img src="/assets/icons/logosite.svg"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span style="font-size:30px;cursor:pointer">&#9776;</span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SÉRIES</a>
+                                <div class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <p><strong class="sub-menu-heading">6ºano</strong></p>
+                                            <p><a href="#">Números Naturais</a></p>
+                                            <p><a href="#">Operações</a></p>
+                                            <p><a href="#">Sequências</a></p>
+                                            <p><a href="#">Introdução a Números Racionais</a></p>
+                                            <p><a href="#">Matemática Financeira</a></p>
+                                            <p><a href="#">Unidades de medidas</a></p>
+                                            <p><a href="#">Geometria Plana</a></p>
+                                            <p><a href="#">Geometria Espacial</a></p>
+                                            <p><a href="#">Sistema Cartesiano</a></p>
+                                            <p><a href="#">Estatística</a></p>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <p><strong class="sub-menu-heading">7ºano</strong></p>
+                                            <p><a href="#">Números Inteiros</a></p>
+                                            <p><a href="#">Operações</a></p>
+                                            <p><a href="#">Números Racionais</a></p>
+                                            <p><a href="#">Operações</a></p>
+                                            <p><a href="#">Matemática Financeira</a></p>
+                                            <p><a href="#">Álgebra</a></p>
+                                            <p><a href="#">Geometria Plana</a></p>
+                                            <p><a href="#">Geometria Espacial</a></p>
+                                            <p><a href="#">Sistema Cartesiano</a></p>
+                                            <p><a href="#">Estatística</a></p>
+                                            <p><a href="#">Probabilidade</a></p>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <p><strong class="sub-menu-heading">8ºano</strong></p>
+                                            <p><a href="#">Números Reais</a></p>
+                                            <p><a href="#">Álgebra</a></p>
+                                            <p><a href="#">Geometria Plana</a></p>
+                                            <p><a href="#">Geometria Espacial</a></p>
+                                            <p><a href="#">Estatística</a></p>
+                                            <p><a href="#">Probabilidade</a></p>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <p><strong class="sub-menu-heading">9ºano</strong></p>
+                                            <p><a href="#">Operações</a></p>
+                                            <p><a href="#">Unidades de medidas</a></p>
+                                            <p><a href="#">Álgebra</a></p>
+                                            <p><a href="#">Noções de funções</a></p>
+                                            <p><a href="#">Geometria Plana</a></p>
+                                            <p><a href="#">Trigonometria</a></p>
+                                            <p><a href="#">Geometria Espacial</a></p>
+                                            <p><a href="#">Estatística</a></p>
+                                            <p><a href="#">Probabilidade</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" name="quiz" href="#">MENSAGENS</a></li>
+                            <li class="nav-item"><a class="nav-link" name="chat" href="#">CALENDÁRIO</a></li>
+                            <li class="nav-item"><a class="nav-link" name="calendar" href="#">ANOTAÇÕES</a></li>
+                            <li class="nav-item"><a class="nav-link" name="conteudo" href="#">QUIZ</a></li>
+                            <li class="nav-item"><a class="nav-link" name="card" href="#">RANKING</a></li>
+                            <form class="form-inline my-2 my-lg-0">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar..." aria-label="Search">
+                                <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Buscar</button>
+                            </form>
+                    </div>
+                </nav>
+            </div>
+    </header>
+
+    <div id="sidenav" class="sidenav">
+        <span href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</span>
+        <a href="#" class="option profile"><img src="/assets/icons/profile.svg" width="50px"> Perfil</a>
+        <a href="#" class="option"><img src="/assets/icons/exercicios.svg" alt=""> Exercicios</a>
+        <a href="#" class="option"><img src="/assets/icons/chat.svg" alt=""> Professores</a>
+        <a href="#" class="option"><img src="/assets/icons/help.svg" alt=""> Ajuda</a>
+        <a href="#" class="option"><img src="/assets/icons/config.svg" alt=""> Configurações</a>
+        <a href="#" class="option"><img src="/assets/icons/logout.svg" alt=""> Sair</a>
+    </div>
+
+
 <div class="wrapper">
 	<nav class="sidebar">
 		<div id="bloco-conteudo">
@@ -99,7 +191,8 @@
         </div>
     </section>
 
+    <script src="/jquery/jquery-3.5.1.min.js"></script>
         <script src="/bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
-        <script src="/jquery/jquery-3.5.1.min.js"></script>
+        
 	</body>
 </html>
