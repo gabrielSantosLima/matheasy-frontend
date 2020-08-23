@@ -2,32 +2,68 @@
 <html lang="pt-br">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
+    <link rel="shortcut icon" href="/assets/picture.ico">
+
     <link rel="stylesheet" href="./../../bootstrap-4.5.0-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="flickity.css">
+    <link rel="stylesheet" href="/Telas/Menu/style.css">
     <title>Aluno&Professor</title>
 </head>
 
+<!--Menu-->  
+
+
 <section id="home">
     <h1>CLIQUE EM UM CARD</h1>
-    <div class="">
-        <div class="card-deck">
-            <div><a href="#"><img src="./../img/card-6.png" class="marg" alt="Card image cap"></a></div>
-            <div><a href="#"><img src="./../img/card-7.png" class="marl" alt="Card image cap"></a></div>
-        </div>
-        <div class="card-deck">
-            <div><a href="#"><img src="./../img/card-8.png" class="marg" alt="Card image cap"></a></div>
-            <div><a href="#"><img src="./../img/card-9.png" class="marl" alt="Card image cap"></a></div>
-        </div>
+
+<div class="carousel" data-flickity>
+    <div class="carousel-cell" >
+        <a href="#">
+            <img src="/assets/img/card-6.png" alt="">
+        </a>
     </div>
+    <div class="carousel-cell" >
+        <a href="#">
+            <img src="/assets/img/card-7.png" alt="">
+        </a>
+    </div>
+    <div class="carousel-cell" >
+        <a href="#">
+            <img src="/assets/img/card-8.png" alt="">
+        </a>
+    </div>
+    <div class="carousel-cell" >
+        <a href="#">
+        <img src="/assets/img/card-9.png" alt="">
+        </a>
+    </div>
+  </div>
 </section>
+
+
+
+<script>
+
+    function openNav() {
+      document.getElementById("sidenav").style.width = "250px";
+      document.getElementById('toggle').style.color = "transparent";
+  }
+  
+  function closeNav() {
+    document.getElementById('toggle').style.color = "white";
+    document.getElementById("sidenav").style.width = "0";
+    
+  }
+        </script>
+
 <script src="./../../jquery/jquery-3.5.1.min.js"></script>
 <script src="./../api.js"></script>
-<script src="./script.js"></script>
+<script src="flickity.pkgd.min.js"></script>
+
 
 <body>
 

@@ -1,0 +1,3 @@
+Cor de fundo botões: #008ed4;
+
+Background do body: #E2EAEC;

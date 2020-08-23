@@ -1,199 +1,53 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
-
-body {
-	line-height: 1.5;
-	background-color: white;
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
 }
 
-@media only screen {
-	.explanation {
-		float: right;
-		margin-right: 100px;
-		margin-top: 2rem;
-		margin-bottom: 2rem;
-		max-width: 1000px;
-		
-		background-color: white !important;
-		color: rgb(55, 53, 47);
-		font-family: 'Roboto', sans-serif;
-	}
+.navList {
+    position: fixed;
+    float: left;
+    margin: 0;
+    width: 300px;
+    height: 100% !important;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.3);
+    list-style-type: none;
+    background-color: #e2e8f3;
+    overflow: auto;
+    font-family: 'Roboto', sans-serif;
 }
 
-@media only screen and (max-width: 1300px){
-	.list-assuntos{
-		display: none;
-	}
-	.explanation {
-		float: none;
-		margin: 1.7rem auto;
-		max-width: 900px;
-		color: rgb(55, 53, 47);
-		font-family: 'Roboto', sans-serif;
-	}
+.navList .lista-content {
+    text-align: center;
 }
 
-.explanation{
-	display: flex;
-	width: 60%;
-	flex-direction: column;
-	padding: 40px;
+.lista-content .titulo-list {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    font-weight: 10px;
+    text-align: center;
+    font-size: 23px;
 }
 
-/*Bloco de Saiba Mais*/
-
-/*Titulo e Subtitulo Principal*/
-h1{
-	font-size: 40px;
-	text-align: center;
-	margin-top: 0;
-	margin-bottom: 30px !important;
+.conteudo a:link {
+    text-decoration: none;
 }
 
-h1,
-h2,
-h3 {
-	letter-spacing: -0.01em;
-	line-height: 1.2;
-	font-weight: 600;
+.conteudo {
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 16px;
 }
 
-.explanation > h2{
-	font-size: 30px;
+.conteudo a {
+    color: black;
 }
 
-.explanation h3{
-	font-size: 24px;
+.conteudo:hover {
+    background-color: rgba(13, 92, 102, 0.3);
 }
 
-.explanation > h4{
-	margin-top: 20px;
-	font-size: 18px;
+.conteudo a:hover {
+    color: rgb(29, 114, 153);
 }
-
-.explanation > h2, h3{
-	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
-	padding: 7px;
-}
-
-/* Paragrafos */
-
-ul,
-li,
-p{
-	margin-top:20px;
-	margin-bottom: 20px;
-}
-
-.explanation > p{
-	text-align: justify;
-	text-justify: inter-word;
-}
-/* Figuras*/
-
-img{
-	
-	text-align: center;
-	max-width: 35%;
-	height: auto;
-}
-
-/* Lista*/
-
-.list-assuntos{
-	position: fixed;
-	float: left !important;
-	margin-top: -8px;
-	margin-left: -47px;
-	width: 350px;
-	height: 100% !important;
-	
-	box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.3);
-	list-style-type: none;
-	background-color:#e2e8f3;
-	overflow: auto;
-	text-align: center;
-	font-family: 'Roboto', sans-serif;
-}
-
-.list-assuntos .navList{
-	position: relative;
-	width: 100%;
-}
-
-.list-assuntos > .lista-content{
-	text-align: center;
-}
-
-.titulo-list{
-	margin-bottom: 15px;
-	margin-top: 15px;
-	
-	font-weight: 10px;
-	font-size: 23px;
-	
-}
-
-.conteudo a:link{
-	text-decoration: none;
-}
-
-.lista-content > .conteudo{
-	margin: 0;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	font-size: 16px;
-}
-
-.lista-content > .conteudo a {
-	color: black;
-}
-
-.lista-content > .conteudo{
-	list-style: none;
-}
-
-.conteudo:hover{
-	background-color: rgba(13, 92, 102, 0.3);
-}
-
-.conteudo a:hover{
-	color: rgb(29, 114, 153);
-} 
-
-/* Botão 
-
-.botao{
-	display: flex;
-	justify-content: space-between;
-	
-	margin-top: 100px;
-}
-
-.btn-link{
-	text-decoration: none;
-}
-
-.btn > a{
-	color: white;
-}
-
-#anterior,
-#proximo {
-	padding: 15px;
-	background-color: teal;
-	
-	border: none;
-	color: white;
-	font-size: 16px;
-	
-	cursor: pointer;
-	transition: 0.7s;
-	
-}
-
-#anterior:hover,
-#proximo:hover{
-	background-color:rgb(7, 85, 85);
-} 
-
-*/

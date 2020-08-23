@@ -1,0 +1,70 @@
+/* MODAL */
+
+const openPopupButtons = document.querySelectorAll('[data-modal-target]')
+const closePopupButtons = document.querySelectorAll('[data-close-button]')
+const overlay = document.getElementById('overlay')
+
+openPopupButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const popup = document.querySelector(button.dataset.modalTarget)
+    openPopup(popup)
+  })
+})
+
+overlay.addEventListener('click', () => {
+  const popups = document.querySelectorAll('.popup.active')
+  popups.forEach(popup => {
+    closePopup(popup)
+  })
+})
+
+closePopupButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const popup = button.closest('.popup')
+    closePopup(popup)
+  })
+})
+
+function openPopup(popup) {
+  if (popup == null) return
+  popup.classList.add('active')
+  overlay.classList.add('active')
+}
+
+function closePopup(popup) {
+  if (popup == null) return
+  popup.classList.remove('active')
+  overlay.classList.remove('active')
+}
+
+
+
+const tagSVG = document.querySelector('svg');
+const pathDoSVG = document.querySelector('svg path');
+const tamanhoTotalDoPath = pathDoSVG.getTotalLength();
+tagSVG.style.setProperty('--tamanhoTotalDoPath', tamanhoTotalDoPath);
+
+console.log(tamanhoTotalDoPath); // 3749.863525390625
+
+function edit() {
+    document.querySelector('#user').readOnly = false;
+    document.querySelector('#password').readOnly = false;
+    document.querySelector('#email').readOnly = false;
+    document.querySelector('#date').readOnly = false;
+
+    document.querySelector('.edit').style.display = 'none';
+    document.querySelector('.save').style.display= 'inline-block';
+    document.querySelector('.cancel').style.display= 'inline-block';
+}
+
+function discart() {
+    document.querySelector('#user').readOnly = true;
+    document.querySelector('#password').readOnly = true;
+    document.querySelector('#email').readOnly = true;
+    document.querySelector('#date').readOnly = true;
+
+    document.querySelector('.edit').style.display = 'inline-block';
+    document.querySelector('.save').style.display= 'none';
+    document.querySelector('.cancel').style.display= 'none';
+}
+
