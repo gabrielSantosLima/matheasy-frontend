@@ -1,47 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-:root{
+:root {
     --box-color: linear-gradient(rgb(85, 172, 212), #0a4a9ee5);
     --btn-color: rgb(43, 133, 175);
 }
 
-*{
+* {
     font-family: "Roboto";
 }
 
-body{
+body {
     background-image: url('./../../assets/icons/undraw_profile_details_f8b7.svg');
     background-repeat: no-repeat;
     background-size: 45%;
     background-position: 10px 50%;
 }
-label{
+
+label {
     font-weight: bold;
 }
 
-.btn, a, .card, span{
+.btn,
+a,
+.card,
+span {
     color: white
 }
 
-.card{
+.card {
     background-image: var(--box-color);
     margin: 20px 0 0 0;
 }
 
-.btn{
+.btn {
     background-color: var(--btn-color);
     transition: 0.4s;
 }
 
-.btn:hover{
+.btn:hover {
     filter: brightness(90%);
 }
 
-#senha{
+#senha {
     position: relative;
 }
 
-#botão{
+#botão {
     top: 450px;
     left: 25px;
     position: absolute;
