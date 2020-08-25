@@ -205,7 +205,7 @@ p {
 
 /* home Section */
 #home {
-	background-image: url(./../img/matt2.png);
+	background-image: url(/assets/icons/matt2.png);
 	background-size: cover;
 	background-position: top center;
 	position: relative;

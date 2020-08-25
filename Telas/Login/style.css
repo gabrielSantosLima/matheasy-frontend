@@ -5,7 +5,9 @@ body,html{
 }
 
 :root{
-    --box-color: #3167ad;
+    --box-color:  linear-gradient(rgb(85, 172, 212), #0a4a9ee5);
+    --btn-color:rgb(43, 133, 175);
+    --small-hover-color: rgb(43, 204, 253);
 }
 
 *{
@@ -24,16 +26,21 @@ body{
 }
 
 .btn{
-    background-color: var(--box-color);
+    background-color: var(--btn-color);
     transition: 0.4s;
+    float: right;
 }
 
 .btn:hover{
     filter: brightness(70%);
 }
 
+small:hover a{
+    color: var(--small-hover-color);
+}
+
 .card{
-    background-color: var(--box-color);
+    background-image: var(--box-color);
 }
 
 #imagemDePerfil{
