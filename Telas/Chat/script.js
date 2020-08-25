@@ -135,9 +135,6 @@ function addEvents(){
 
 function endScrollChat(){
   const totalHeight = $('.chat')[0].scrollHeight
-
-  console.log(totalHeight)
-
   $('.chat').scrollTop(totalHeight)
 }
 

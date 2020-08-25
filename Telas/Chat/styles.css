@@ -85,7 +85,7 @@ img{
 }
 
 .contatos .search-teacher input{
-  width: 80%;
+  width: 60%;
   padding: 0.4rem;
   background: var(--color-input-form);
   border-radius: 0 0.8rem 0.8rem 0;
@@ -98,6 +98,25 @@ img{
   padding: 0.4rem;
   background: var(--color-input-form);
   border-radius: 0.8rem 0 0 0.8rem;
+}
+
+.contatos .search-teacher a{
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  margin: 8px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 2.4rem;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-button);
+  transition: filter .4s;
+}
+
+.contatos .search-teacher a:hover{
+  filter: brightness(70%);
 }
 
 .contatos .contato{
