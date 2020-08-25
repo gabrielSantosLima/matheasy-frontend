@@ -1,53 +1,73 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-body,html{
+body,
+html {
     height: 100%;
 }
 
+<<<<<<< HEAD:Telas/Login/style.css
 :root{
     --box-color:  linear-gradient(rgb(85, 172, 212), #0a4a9ee5);
     --btn-color:rgb(43, 133, 175);
     --small-hover-color: rgb(43, 204, 253);
+=======
+:root {
+    --box-color: linear-gradient(rgb(85, 172, 212), #0a4a9ee5);
+    --btn-color: rgb(43, 133, 175);
+>>>>>>> b7a04fd2e31fb5795f5b3bb9e3d75a53f8a5379f:Telas/Login/styles.css
 }
 
-*{
+* {
     font-family: "Roboto";
 }
 
-body{
+body {
     background-image: url('./../../assets/icons/undraw_mathematics_4otb.svg');
     background-repeat: no-repeat;
     background-size: 40%;
     background-position: 0 0;
 }
 
-.btn, a, .card, span{
+.btn,
+a,
+.card,
+span {
     color: white
 }
 
+<<<<<<< HEAD:Telas/Login/style.css
 .btn{
+=======
+.btn {
+>>>>>>> b7a04fd2e31fb5795f5b3bb9e3d75a53f8a5379f:Telas/Login/styles.css
     background-color: var(--btn-color);
     transition: 0.4s;
     float: right;
 }
 
-.btn:hover{
+.btn:hover {
     filter: brightness(70%);
 }
 
+<<<<<<< HEAD:Telas/Login/style.css
 small:hover a{
     color: var(--small-hover-color);
 }
 
 .card{
+=======
+.card {
+>>>>>>> b7a04fd2e31fb5795f5b3bb9e3d75a53f8a5379f:Telas/Login/styles.css
     background-image: var(--box-color);
 }
 
-#imagemDePerfil{
+#imagemDePerfil {
     width: 500px;
     position: absolute;
     top: -3%;
-    left:50%;
-    transform: translate(-50%,-50%)
+    left: 50%;
+    transform: translate(-50%, -50%)
 }
 
+.a {
+    color: black;
+}
