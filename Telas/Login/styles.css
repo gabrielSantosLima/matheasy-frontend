@@ -1,46 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-body,html{
+body,
+html {
     height: 100%;
 }
 
-:root{
-    --box-color: #3167ad;
+:root {
+    --box-color: linear-gradient(rgb(85, 172, 212), #0a4a9ee5);
+    --btn-color: rgb(43, 133, 175);
 }
 
-*{
+* {
     font-family: "Roboto";
 }
 
-body{
+body {
     background-image: url('./../../assets/icons/undraw_mathematics_4otb.svg');
     background-repeat: no-repeat;
     background-size: 40%;
     background-position: 0 0;
 }
 
-.btn, a, .card, span{
+.btn,
+a,
+.card,
+span {
     color: white
 }
 
-.btn{
-    background-color: var(--box-color);
+.btn {
+    background-color: var(--btn-color);
     transition: 0.4s;
 }
 
-.btn:hover{
+.btn:hover {
     filter: brightness(70%);
 }
 
-.card{
-    background-color: var(--box-color);
+.card {
+    background-image: var(--box-color);
 }
 
-#imagemDePerfil{
+#imagemDePerfil {
     width: 500px;
     position: absolute;
     top: -3%;
-    left:50%;
-    transform: translate(-50%,-50%)
+    left: 50%;
+    transform: translate(-50%, -50%)
 }
 
+.a {
+    color: black;
+}
