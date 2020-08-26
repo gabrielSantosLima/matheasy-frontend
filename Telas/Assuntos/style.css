@@ -1,0 +1,306 @@
+:root {
+    --sidebar-text: #0a0a0a;
+    --sidebar-text-hover: #fff;
+    --sidbar-background: #ffffffc0;
+    --sidebar-background-hover: #1e87dd;
+    --sidebar-link: #555;
+	--main-background: rgba(32, 83, 131, 0.664);
+	--main-text: white;
+	
+}
+
+/* Sidebar */
+
+.sidebar {
+	width: 270px;
+	height: 100vh;
+	padding: 10px;
+	background: var(--sidbar-background);
+	position: fixed;
+    overflow: auto;
+    text-align: center;
+}
+
+.sidebar h2 {
+	margin:10px;
+	overflow: hidden;
+    line-height: 1;
+    font-size: 24px;
+	color: var(--sidebar-text);
+}
+
+.sidebar ul {
+	list-style: none;
+    padding: 0px;
+ 
+}
+
+.sidebar a {
+	display: block;
+	padding: 5px 20px;
+    text-decoration: none;
+    font-size: 14px;
+	color: var(--sidebar-link);
+}
+
+
+
+.sidebar li a.active, .sidebar li a:hover {
+	background: var(--sidebar-background-hover);
+    color: var(--sidebar-text-hover);
+    text-decoration: none;
+}
+
+@media (max-width: 700px) {
+	.sidebar {
+		border-top: 80px solid var(--sidebar-background);
+		width: auto;
+		height: auto;
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		padding: 10px;
+	}
+	.sidebar > div {
+		flex: 1;
+		margin: 10px;
+	}
+	.sidebar a {
+		padding: 5px;
+	}
+}
+
+/* Main */
+
+#main {
+    margin-top: 65px;
+    padding-left: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--main-background);
+    min-height: 100vh;
+}
+
+
+
+@media only screen {
+	.explanation {
+		float: right;
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+		max-width: 1000px;
+
+        color: var(--main-text);
+		font-family: 'Roboto', sans-serif;
+	}
+}
+
+@media only screen and (max-width: 1300px){
+	.list-assuntos{
+		display: none;
+	}
+	.explanation {
+		float: none;
+		margin: 1.7rem auto;
+		max-width: 900px;
+        color: var(--main-text);
+		font-family: 'Roboto', sans-serif;
+	}
+}
+
+.explanation{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.page{
+    padding: 20px;
+}
+
+/*Bloco de Saiba Mais*/
+.info{
+    padding: 20px;
+    background-color: #02757e;
+    margin-top: 100px;
+    margin-bottom: 70px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+a#site{
+    text-decoration: underline;
+    color: white;
+    transition: 0.3s;
+}
+
+#site:hover{
+    cursor: pointer;
+    color:  black;
+}
+
+/*Titulo e Subtitulo Principal*/
+.titulo-principal{
+	font-size: 40px;
+	text-align: center;
+}
+
+.subtitle{
+	color: grey !important; /* TIRAR O IMPORTANT*/
+	margin: 25px;
+	text-align: center;
+}
+
+
+/*Titulos de Cada Assunto*/
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+    margin-bottom: 0;
+}
+
+.page-body .headline{
+	font-size: 30px;
+}
+
+.page-body .mini-title{
+	font-size: 24px;
+}
+
+.page-body .small-title{
+	margin-top: 20px;
+	font-size: 18px;
+}
+
+.headline,
+.mini-title{
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+	padding: 7px;
+}
+
+.page-title {
+	font-size: 30px;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+/* Paragrafos */
+
+ul,
+li,
+p{
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+
+/* Figuras*/
+
+
+.column {
+    float: left;
+    padding: 5px;
+}
+
+.table{
+	margin-top: 20px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+@media screen and (max-width: 500px) {
+  #main{
+	  width: 100%;
+	  padding-left: 0;
+  }
+}
+
+/* QUIZ */
+
+.quiz{
+	margin: 30px;
+	border: 4px solid #02757e;
+	display: flex;
+	flex-direction: column;
+}
+
+p#exercicio{
+	font-weight: lighter;
+}
+
+.quiz p{
+	padding: 20px;
+}
+
+.titulo{
+	background-color: #02757e;
+	padding: 20px;
+	color: white;
+	text-align: center;
+}
+
+.titulo h1{
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+
+.botao a .btn-link{
+	color: white !important;
+	transition: 0.3s;
+	text-decoration: none;
+}
+
+.btn-quiz{
+	padding: 15px;
+	background-color: #02757e;
+	align-items: center;
+	border: none;
+	color: white;
+	font-size: 20px;
+	cursor: pointer;
+	transition: 0.7s;
+}
+
+.btn-quiz:hover{
+	background-color:rgb(7, 85, 85);
+}
+
+/* Botões */
+
+.botao{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 100px;
+}
+
+.btn-link{
+	text-decoration: none;
+	color: white;
+}
+
+#anterior,
+#proximo {
+	padding: 15px;
+	background-color: teal;
+
+	border: none;
+	font-size: 16px;
+
+	cursor: pointer;
+	transition: 0.7s;
+	
+}
+
+#anterior:hover,
+#proximo:hover{
+	background-color:rgb(7, 85, 85);
+	
+}
