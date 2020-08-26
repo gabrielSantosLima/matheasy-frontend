@@ -128,7 +128,7 @@ header .wrapper.nav .top_menu span {
 
 /*                         MENU DE CIMA                        */
 
-#header {
+header {
     position: fixed;
     z-index: 10;
     left: 0;
@@ -137,7 +137,7 @@ header .wrapper.nav .top_menu span {
     height: auto;
 }
 
-.top_menu {
+header .wrapper.nav .top_menu {
     position: fixed;
     z-index: 10;
     left: 0;
@@ -148,7 +148,7 @@ header .wrapper.nav .top_menu span {
     background-image: var(--topmenu-background);
 }
 
-#header .navbar {
+header .wrapper.nav .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -158,46 +158,46 @@ header .wrapper.nav .top_menu span {
     padding: 0 10px;
 }
 
-.navbar-brand {
+header .wrapper.nav .top_menu  .navbar .navbar-brand {
     margin-left: 10px;
 }
 
-.navbar-brand img {
+header .wrapper.nav .top_menu  .navbar .navbar-brand img {
     height: 48px;
 }
 
-.navbar-nav li a {
+header .wrapper.nav .top_menu .navbar .collapse.navbar-collapse .navbar-nav li a {
     color: var(--navbar-li-a) !important;
     font-weight: 600;
     text-align: left;
 }
 
-.navbar-toggler {
+header .wrapper.nav .top_menu .navbar .navbar-toggler {
     outline: none !important;
 }
 
-.col-md-2 {
+header .wrapper.nav .top_menu  .navbar .collapse.navbar-collapse .navbar-nav .dropdown-menu.mega-menu .row .col-md-2 {
     margin-left: 45px;
 }
 
-.mega-menu {
+header .wrapper.nav .top_menu  .navbar .collapse.navbar-collapse .navbar-nav .dropdown-menu.mega-menu {
     width: 700px;
     padding: 5px;
     background-color: var(--megamenu-background);
 }
 
-.mega-menu a {
+header .wrapper.nav .top_menu  .navbar .collapse.navbar-collapse .navbar-nav .dropdown-menu.mega-menu a {
     text-decoration: none;
     color: var(--megamenu-a-text);
 }
 
-.mega-menu .sub-menu-heading {
+header .wrapper.nav .top_menu  .navbar .collapse.navbar-collapse .navbar-nav .dropdown-menu.mega-menu .sub-menu-heading {
     font-size: 28px;
     color: var(--navbar-li-ac);
 }
 
 @media(max-width:500px) {
-    .mega-menu {
+    header .wrapper.nav .top_menu  .navbar .collapse.navbar-collapse .navbar-nav .dropdown-menu.mega-menu {
         width: 300px;
     }
 }
