@@ -14,11 +14,11 @@
     --navitem-atual-navlink-hover: #237e91;
     --navitem-atual-navlink-hover-text: rgb(5, 0, 73);
     --navbar-li-a: white;
-    --megamenu-background: #191970;
+    --megamenu-background: #4d9aa1;
     --megamenu-a-text: #000000;
 }
 
-header .wrapper .top_menu span {
+header .wrapper.nav .top_menu span {
     color: var(--btn-sidebar);
 }
 
